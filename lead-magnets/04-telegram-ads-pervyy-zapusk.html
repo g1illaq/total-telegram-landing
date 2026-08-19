@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Telegram Ads: первый запуск</title>
+<meta name="description" content="Бесплатный гайд: как понять, подходит ли вам Telegram Ads, что подготовить, из чего состоит хорошее объявление и какие цифры смотреть после запуска. От Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%232aabee' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607; --bg-alt: #0b0c0f; --surface: #101114;
+  --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+  --ink: #f5f5f7; --ink-soft: rgba(245,245,247,0.72); --muted: rgba(245,245,247,0.48);
+  --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
+  --tg-blue: #2aabee; --tg-blue-soft: rgba(42,171,238,0.12); --tg-blue-border: rgba(42,171,238,0.4);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var(--ink); -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.doc { max-width: 900px; margin: 0 auto; }
+.sheet {
+  background: var(--bg);
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  padding: 64px 72px; min-height: 100vh; position: relative;
+  page-break-after: always; break-after: page;
+  display: flex; flex-direction: column;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11.5px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--tg-blue); background: var(--tg-blue-soft);
+  border: 1px solid var(--tg-blue-border); border-radius: 4px; padding: 8px 14px; width: fit-content;
+}
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; padding: 8px 12px; width: fit-content; }
+.logo span { color: var(--accent); }
+.cover { justify-content: center; align-items: center; text-align: center; background: radial-gradient(ellipse at top, var(--tg-blue-soft), transparent 60%), var(--bg); }
+.cover .logo { margin: 0 auto 48px; } .cover .eyebrow { margin: 0 auto 28px; }
+.cover-frame { display: inline-block; padding: 32px clamp(20px,5vw,56px); margin-bottom: 32px; }
+.cover-title { font-family: var(--font-display); font-size: clamp(28px,4.2vw,44px); font-weight: 600; text-transform: uppercase; line-height: 1.15; margin: 0; max-width: 17ch; }
+.cover-title .accent { color: var(--accent); }
+.cover-subtitle { font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 48ch; margin: 0 auto 40px; }
+.cover-meta { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
+.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
+.cover-author strong { color: var(--ink-soft); }
+.page-head { margin-bottom: 30px; }
+.page-title { font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
+.page-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; margin: 14px 0 0; }
+.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+.tree { display: flex; flex-direction: column; gap: 10px; }
+.tree-q { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+.tree-q .q { font-size: 14.5px; font-weight: 600; margin: 0 0 8px; }
+.tree-q .a { display: flex; gap: 20px; font-size: 13px; color: var(--ink-soft); }
+.tree-q .a span strong { color: var(--tg-blue); font-family: var(--font-display); font-size: 11px; text-transform: uppercase; margin-right: 6px; }
+
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 8px 0 24px; }
+.flow-step { font-family: var(--font-display); font-size: 12.5px; text-transform: uppercase; color: var(--ink); background: var(--surface); border: 1px solid var(--tg-blue-border); border-radius: 999px; padding: 10px 16px; }
+.flow-arrow { color: var(--tg-blue); }
+
+.four-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.four-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.four-card .n { font-family: var(--font-display); font-size: 12px; color: var(--tg-blue); margin-bottom: 8px; }
+.four-card h3 { font-size: 15px; margin: 0 0 6px; }
+.four-card p { font-size: 13px; line-height: 1.5; color: var(--ink-soft); margin: 0; }
+
+.check-item { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; cursor: pointer; user-select: none; }
+.check-box { width: 20px; height: 20px; border: 1.5px solid var(--border-strong); border-radius: 5px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; transition: border-color .15s, background .15s; }
+.check-box svg { opacity: 0; transform: scale(.5); transition: opacity .15s, transform .15s; color: var(--bg); }
+.check-item.is-checked .check-box { background: var(--tg-blue); border-color: var(--tg-blue); }
+.check-item.is-checked .check-box svg { opacity: 1; transform: scale(1); }
+.check-item span.check-text { font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
+.check-item.is-checked span.check-text { color: var(--ink); }
+
+.metric-table { width: 100%; border-collapse: collapse; }
+.metric-table th, .metric-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+.metric-table th { font-family: var(--font-display); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.metric-table td:first-child { font-family: var(--font-display); font-size: 12.5px; color: var(--tg-blue); white-space: nowrap; }
+.metric-table td { color: var(--ink-soft); }
+
+.bridge { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin-top: 8px; }
+.bridge p { font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+.bridge p strong { color: var(--ink); }
+
+.final { justify-content: center; text-align: center; align-items: center; background: radial-gradient(ellipse at top, var(--tg-blue-soft), transparent 60%), var(--bg); }
+.final-title { font-family: var(--font-display); font-size: clamp(22px,3.2vw,32px); font-weight: 600; text-transform: uppercase; max-width: 22ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0a0a0a; font-family: var(--font-display); font-weight: 500; font-size: 14.5px; text-decoration: none; border-radius: 999px; padding: 14px 26px; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
+.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+
+@media (max-width: 700px) { .sheet { padding: 40px 24px; } .four-grid { grid-template-columns: 1fr; } .page-num { display: none; } .metric-table { font-size: 12px; } }
+@media print {
+  body { background: var(--bg); }
+  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
+  .check-item, .four-card, .tree-q { break-inside: avoid; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <section class="sheet cover">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow">Бесплатный материал · Telegram Ads</div>
+    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
+      <h1 class="cover-title">Telegram Ads: первый запуск <span class="accent">без слива бюджета</span></h1>
+    </div>
+    <p class="cover-subtitle">Что проверить перед стартом, из чего состоит рабочее объявление и на какие цифры смотреть после запуска — без глубокого разбора кабинета, только то, что нужно знать до первого клика.</p>
+    <div class="cover-meta">
+      <span><strong>5</strong> шагов</span>
+      <span><strong>12</strong> проверок перед запуском</span>
+      <span><strong>6</strong> метрик</span>
+    </div>
+    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
+  </section>
+
+  <!-- 01 -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">01 · Разбор</div>
+      <h2 class="page-title">Подходит ли вам вообще Telegram Ads</h2>
+      <p class="page-lead">Прежде чем открывать кабинет, ответьте честно на четыре вопроса.</p>
+    </div>
+    <div class="tree" id="treeWrap"></div>
+    <div class="page-num">02 / 07</div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">02 · Подготовка</div>
+      <h2 class="page-title">Что подготовить до рекламного кабинета</h2>
+      <p class="page-lead">Кабинет — последний шаг, не первый. До него нужно закрыть пять вещей по порядку.</p>
+    </div>
+    <div class="flow-row" id="flowWrap"></div>
+    <div class="four-grid" id="flowDetailWrap"></div>
+    <div class="page-num">03 / 07</div>
+  </section>
+
+  <!-- 03 -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">03 · Объявление</div>
+      <h2 class="page-title">Из чего состоит хорошее объявление</h2>
+      <p class="page-lead">Четыре элемента — и если хотя бы одного не хватает, объявление будет работать хуже, каким бы ни был бюджет.</p>
+    </div>
+    <div class="four-grid" id="adPartsWrap"></div>
+    <div class="page-num">04 / 07</div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">04 · Перед запуском</div>
+      <h2 class="page-title">Чек-лист перед кнопкой Launch</h2>
+    </div>
+    <div id="checklistWrap"></div>
+    <div class="page-num">05 / 07</div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">05 · После запуска</div>
+      <h2 class="page-title">Какие цифры смотреть</h2>
+      <p class="page-lead">Базовая карта метрик — без глубокого масштабирования, просто чтобы понимать, что означает каждая цифра в кабинете.</p>
+    </div>
+    <table class="metric-table">
+      <tbody>
+        <tr><td>Показы</td><td>Сколько раз объявление вообще показали</td></tr>
+        <tr><td>Клики</td><td>Сколько раз по нему перешли</td></tr>
+        <tr><td>CTR</td><td>% кликнувших от всех, кто увидел объявление</td></tr>
+        <tr><td>Цена за клик</td><td>Во сколько обошёлся один переход</td></tr>
+        <tr><td>Конверсия</td><td>Сколько из перешедших подписались, написали или купили</td></tr>
+        <tr><td>Цена за результат</td><td>Итоговая стоимость одного целевого действия</td></tr>
+      </tbody>
+    </table>
+    <div class="bridge" style="margin-top:28px;">
+      <p><strong>Запустить рекламу технически несложно.</strong> Сложнее понять, что запускать, кому показывать, какие цифры считать нормальными и что менять, если реклама не работает — это уже не чек-лист, а отдельная система.</p>
+    </div>
+    <div class="page-num">06 / 07</div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sheet final">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
+    <h2 class="final-title">Это первый запуск. Дальше — масштабирование</h2>
+    <p class="final-lead">Модуль Telegram Ads в курсе Total Telegram разбирает полный цикл: устройство кабинетов TON и Euro, кто такие селлеры, создание рекламных баннеров и запуск с масштабированием на реальном проекте.</p>
+    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
+      Посмотреть курс Total Telegram
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+  function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
+
+  var TREE = [
+    { q: "Есть площадка, куда вести трафик?", yes: "Канал или бот готовы принимать людей — идём дальше", no: "Сначала запустите и упакуйте площадку — реклама на пустой канал не работает" },
+    { q: "Есть бюджет от уровня, на котором вообще можно тестировать?", yes: "Даже небольшой тестовый бюджет даёт первые данные", no: "На совсем маленьких бюджетах результат почти невозможно интерпретировать" },
+    { q: "Есть понятный оффер, который можно объяснить в одном коротком объявлении?", yes: "Значит, есть что показать в рекламе", no: "Сначала сформулируйте оффер — реклама не исправит нечёткий продукт" },
+    { q: "Готовы тестировать и оптимизировать, а не ждать результата с первого объявления?", yes: "Это рабочий настрой для первого запуска", no: "Ads — это серия тестов, а не одна волшебная кнопка" },
+  ];
+
+  var FLOW = ["Продукт", "Оффер", "Канал", "Посадочная точка", "Аналитика"];
+  var FLOW_DETAIL = [
+    { n: "01", h: "Продукт", p: "То, что вы в итоге продаёте или к чему ведёте — должно существовать и быть готовым к трафику." },
+    { n: "02", h: "Оффер", p: "Конкретное предложение: что человек получает и почему это ценно именно сейчас." },
+    { n: "03", h: "Канал", p: "Площадка упакована — название, описание, закреп, навигация выдержат первый взгляд нового человека." },
+    { n: "04", h: "Посадочная точка", p: "Конкретный пост, бот или экран, куда приведёт объявление — не просто «на канал»." },
+    { n: "05", h: "Аналитика", p: "Способ понять, что реклама сработала: метка, отдельная ссылка или кнопка в боте." },
+  ];
+
+  var AD_PARTS = [
+    { n: "Оффер", p: "Что получит человек, если кликнет — сформулировано в одной фразе." },
+    { n: "Текст", p: "Коротко и по делу: у Telegram Ads жёсткий лимит символов, лишнего места нет." },
+    { n: "Креатив", p: "Баннер, который считывается за секунду, даже без текста рядом." },
+    { n: "CTA", p: "Понятное действие: подписаться, написать, перейти — без двусмысленности." },
+  ];
+
+  var CHECKLIST = [
+    "Посадочная точка готова принять трафик прямо сейчас",
+    "В тексте и теме объявления нет запрещённых по правилам Telegram слов",
+    "Текст укладывается в лимит символов кабинета",
+    "Креатив читаем и понятен без звука",
+    "В тексте есть чёткий CTA",
+    "Ссылка ведёт именно на нужный пост или бота, а не на канал целиком",
+    "Настроен способ отследить конверсию — метка, UTM или отдельная кнопка бота",
+    "Определён тестовый бюджет, а не весь бюджет сразу",
+    "Аудитория или каналы показа выбраны осознанно, а не «на всех подряд»",
+    "Заранее определено, какая цифра будет считаться успехом теста",
+    "Продукт или оффер актуален на момент запуска — в наличии, без устаревших условий",
+    "Есть время в ближайшие часы после запуска, чтобы отследить первые метрики",
+  ];
+
+  function renderTree() {
+    document.getElementById("treeWrap").innerHTML = TREE.map(function (t) {
+      return (
+        '<div class="tree-q"><p class="q">' + esc(t.q) + '</p>' +
+        '<div class="a"><span><strong>Да</strong>' + esc(t.yes) + '</span></div>' +
+        '<div class="a" style="margin-top:4px;"><span><strong>Нет</strong>' + esc(t.no) + '</span></div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  function renderFlow() {
+    document.getElementById("flowWrap").innerHTML = FLOW.map(function (s, i) {
+      var arrow = i > 0 ? '<span class="flow-arrow">→</span>' : "";
+      return arrow + '<span class="flow-step">' + esc(s) + '</span>';
+    }).join("");
+    document.getElementById("flowDetailWrap").innerHTML = FLOW_DETAIL.map(function (f) {
+      return '<div class="four-card"><div class="n">' + f.n + '</div><h3>' + esc(f.h) + '</h3><p>' + esc(f.p) + '</p></div>';
+    }).join("");
+  }
+
+  function renderAdParts() {
+    document.getElementById("adPartsWrap").innerHTML = AD_PARTS.map(function (a, i) {
+      return '<div class="four-card"><div class="n">0' + (i + 1) + '</div><h3>' + esc(a.n) + '</h3><p>' + esc(a.p) + '</p></div>';
+    }).join("");
+  }
+
+  function renderChecklist() {
+    var checkSvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.2 11.5L13 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var wrap = document.getElementById("checklistWrap");
+    wrap.innerHTML = CHECKLIST.map(function (text) {
+      return '<label class="check-item"><span class="check-box">' + checkSvg + '</span><span class="check-text">' + esc(text) + '</span></label>';
+    }).join("");
+    wrap.querySelectorAll(".check-item").forEach(function (item) {
+      item.addEventListener("click", function () { item.classList.toggle("is-checked"); });
+    });
+  }
+
+  renderTree();
+  renderFlow();
+  renderAdParts();
+  renderChecklist();
+})();
+</script>
+</body>
+</html>

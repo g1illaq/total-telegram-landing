@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>7 способов зарабатывать на Telegram-канале</title>
+<meta name="description" content="Бесплатная карта моделей монетизации Telegram-канала: кому подходит, что нужно, на каком этапе имеет смысл. От Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607; --bg-alt: #0b0c0f; --surface: #101114;
+  --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+  --ink: #f5f5f7; --ink-soft: rgba(245,245,247,0.72); --muted: rgba(245,245,247,0.48);
+  --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var(--ink); -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.doc { max-width: 900px; margin: 0 auto; }
+.sheet {
+  background: var(--bg);
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  padding: 64px 72px; min-height: 100vh; position: relative;
+  page-break-after: always; break-after: page;
+  display: flex; flex-direction: column;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11.5px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); background: var(--accent-soft);
+  border: 1px solid var(--accent-border); border-radius: 4px; padding: 8px 14px; width: fit-content;
+}
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; padding: 8px 12px; width: fit-content; }
+.logo span { color: var(--accent); }
+.cover { justify-content: center; align-items: center; text-align: center; }
+.cover .logo { margin: 0 auto 48px; } .cover .eyebrow { margin: 0 auto 28px; }
+.cover-frame { display: inline-block; padding: 32px clamp(20px,5vw,56px); margin-bottom: 32px; }
+.cover-title { font-family: var(--font-display); font-size: clamp(28px,4.2vw,44px); font-weight: 600; text-transform: uppercase; line-height: 1.15; margin: 0; max-width: 17ch; }
+.cover-title .accent { color: var(--accent); }
+.cover-subtitle { font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 48ch; margin: 0 auto 40px; }
+.cover-meta { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
+.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
+.cover-author strong { color: var(--ink-soft); }
+.page-head { margin-bottom: 28px; }
+.page-title { font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
+.page-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; margin: 14px 0 0; }
+.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+.model-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; }
+.model-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+.model-num { font-family: var(--font-display); font-size: 13px; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.model-head h3 { font-size: 16px; margin: 0; }
+.model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 10px; }
+.model-grid div { font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); }
+.model-grid div b { display: block; font-family: var(--font-display); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; font-weight: 400; }
+
+.pick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.pick-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; }
+.pick-card h3 { font-size: 14.5px; margin: 0 0 8px; color: var(--accent-2); }
+.pick-card p { font-size: 13px; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+
+.final { justify-content: center; text-align: center; align-items: center; }
+.final-title { font-family: var(--font-display); font-size: clamp(22px,3.2vw,32px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0a0a0a; font-family: var(--font-display); font-weight: 500; font-size: 14.5px; text-decoration: none; border-radius: 999px; padding: 14px 26px; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
+.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+
+@media (max-width: 700px) { .sheet { padding: 40px 24px; } .model-grid { grid-template-columns: 1fr; } .pick-grid { grid-template-columns: 1fr; } .page-num { display: none; } }
+@media print {
+  body { background: var(--bg); }
+  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
+  .model-card, .pick-card { break-inside: avoid; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <section class="sheet cover">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow">Бесплатный материал</div>
+    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
+      <h1 class="cover-title">7 способов <span class="accent">зарабатывать</span> на Telegram-канале</h1>
+    </div>
+    <p class="cover-subtitle">Не «как заработать миллион», а карта реальных моделей монетизации — кому какая подходит и с чего начать выбор своей.</p>
+    <div class="cover-meta">
+      <span><strong>7</strong> моделей</span>
+      <span><strong>4</strong> сценария выбора</span>
+    </div>
+    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
+  </section>
+
+  <!-- MODELS -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Карта моделей</div>
+      <h2 class="page-title">7 способов монетизации канала</h2>
+      <p class="page-lead">Для каждой модели — кому подходит, что для неё нужно и на каком этапе канала она начинает работать.</p>
+    </div>
+    <div id="modelsWrap"></div>
+    <div class="page-num">02 / 04</div>
+  </section>
+
+  <!-- MODELS PAGE 2 (rest) -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Карта моделей · продолжение</div>
+      <h2 class="page-title">Модели 5–7</h2>
+    </div>
+    <div id="modelsWrap2"></div>
+    <div class="page-num">03 / 04</div>
+  </section>
+
+  <!-- HOW TO PICK -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Как выбрать свою модель</div>
+      <h2 class="page-title">Отталкивайтесь от типа канала</h2>
+    </div>
+    <div class="pick-grid" id="pickWrap"></div>
+    <div class="page-num">04 / 05</div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sheet final">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
+    <h2 class="final-title">Сначала система, потом монетизация</h2>
+    <p class="final-lead">Чтобы любая из этих моделей заработала, каналу сначала нужна аудитория и система: упаковка, контент, продвижение. Это как раз то, чему целиком посвящён курс Total Telegram.</p>
+    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
+      Посмотреть курс Total Telegram
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+  function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
+
+  var MODELS = [
+    { n: "01", h: "Продажа собственных услуг", who: "Эксперты, специалисты, консультанты", need: "Понятный оффер и канал, где видна экспертиза", when: "С первых подписчиков — не требует большой аудитории" },
+    { n: "02", h: "Продажа образовательных продуктов", who: "Эксперты с системным опытом и методикой", need: "Готовый продукт (курс, гайд) и доверие аудитории", when: "Когда уже есть регулярный контент и репутация" },
+    { n: "03", h: "Реклама", who: "Медиа и тематические каналы с широкой аудиторией", need: "Стабильный охват и вовлечённость", when: "От нескольких тысяч живых подписчиков" },
+    { n: "04", h: "Платный контент / подписка", who: "Авторы с уникальным контентом или закрытой экспертизой", need: "Контент, за который готовы платить регулярно", when: "Когда бесплатная часть уже доказала ценность" },
+  ];
+  var MODELS2 = [
+    { n: "05", h: "Партнёрские продукты", who: "Каналы с доверительной связью с аудиторией", need: "Продукт партнёра, который реально подходит аудитории", when: "Когда рекомендации канала уже что-то значат для читателей" },
+    { n: "06", h: "Лидогенерация для бизнеса", who: "Каналы, чья аудитория совпадает с клиентами бизнеса", need: "Понятная механика передачи заявки", when: "Когда аудитория целевая, а не просто большая" },
+    { n: "07", h: "Автоматизированная монетизация через Telegram-инструменты", who: "Каналы, готовые к системной, а не разовой монетизации", need: "Настроенные боты/сервисы для приёма платежей и подписок", when: "Когда остальные модели уже протестированы и приносят результат" },
+  ];
+
+  var PICK = [
+    { h: "У меня экспертный блог", p: "Начните с продажи собственных услуг — это самая быстрая модель без большой аудитории. Дальше — образовательные продукты и платная подписка." },
+    { h: "У меня тематический канал", p: "Основной путь — реклама и партнёрские продукты, когда аудитория стабильна и вовлечена. Лидогенерация — если тематика близка к конкретному бизнесу." },
+    { h: "У меня бизнес", p: "Смотрите на канал как на инструмент лидогенерации и продажи собственных услуг/продуктов, а не как на медиа для рекламы других." },
+    { h: "У меня пока небольшая аудитория", p: "Реклама и партнёрские продукты пока не сработают — начните с продажи своих услуг или экспертизы, это не требует больших охватов." },
+  ];
+
+  function renderModels(id, list) {
+    document.getElementById(id).innerHTML = list.map(function (m) {
+      return (
+        '<div class="model-card"><div class="model-head"><span class="model-num">' + m.n + '</span><h3>' + esc(m.h) + '</h3></div>' +
+        '<div class="model-grid">' +
+        '<div><b>Кому подходит</b>' + esc(m.who) + '</div>' +
+        '<div><b>Что нужно</b>' + esc(m.need) + '</div>' +
+        '<div><b>Когда имеет смысл</b>' + esc(m.when) + '</div>' +
+        '</div></div>'
+      );
+    }).join("");
+  }
+
+  function renderPick() {
+    document.getElementById("pickWrap").innerHTML = PICK.map(function (p) {
+      return '<div class="pick-card"><h3>' + esc(p.h) + '</h3><p>' + esc(p.p) + '</p></div>';
+    }).join("");
+  }
+
+  renderModels("modelsWrap", MODELS);
+  renderModels("modelsWrap2", MODELS2);
+  renderPick();
+})();
+</script>
+</body>
+</html>

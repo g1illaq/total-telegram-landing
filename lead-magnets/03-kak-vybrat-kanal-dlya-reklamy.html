@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Как выбрать канал для рекламы</title>
+<meta name="description" content="Не покупай рекламу в Telegram, пока не проверишь эти 12 пунктов. Инструкция + таблица сравнения каналов для закупа. От Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607; --bg-alt: #0b0c0f; --surface: #101114;
+  --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+  --ink: #f5f5f7; --ink-soft: rgba(245,245,247,0.72); --muted: rgba(245,245,247,0.48);
+  --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var(--ink); -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.doc { max-width: 1080px; margin: 0 auto; }
+.sheet {
+  background: var(--bg);
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  padding: 64px 72px; min-height: 100vh; position: relative;
+  page-break-after: always; break-after: page;
+  display: flex; flex-direction: column;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11.5px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); background: var(--accent-soft);
+  border: 1px solid var(--accent-border); border-radius: 4px; padding: 8px 14px; width: fit-content;
+}
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; padding: 8px 12px; width: fit-content; }
+.logo span { color: var(--accent); }
+.cover { justify-content: center; align-items: center; text-align: center; }
+.cover .logo { margin: 0 auto 48px; } .cover .eyebrow { margin: 0 auto 28px; }
+.cover-frame { display: inline-block; padding: 32px clamp(20px,5vw,56px); margin-bottom: 32px; }
+.cover-title { font-family: var(--font-display); font-size: clamp(26px,3.8vw,40px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 0; max-width: 20ch; }
+.cover-title .accent { color: var(--accent); }
+.cover-subtitle { font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 50ch; margin: 0 auto 40px; }
+.cover-meta { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
+.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
+.cover-author strong { color: var(--ink-soft); }
+.page-head { margin-bottom: 30px; }
+.page-title { font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
+.page-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 68ch; margin: 14px 0 0; }
+.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+.check-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.check-num { font-family: var(--font-display); font-size: 12px; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; width: 26px; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.check-body h3 { font-size: 14.5px; margin: 0 0 4px; }
+.check-body p { font-size: 13px; line-height: 1.5; color: var(--ink-soft); margin: 0; }
+
+.guide-block { margin-bottom: 26px; }
+.guide-block h3 { font-family: var(--font-display); font-size: 14px; text-transform: uppercase; color: var(--accent-2); margin: 0 0 10px; }
+.guide-block p, .guide-block li { font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 6px; }
+.guide-block ul { margin: 0; padding-left: 18px; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+table.cmp { width: 100%; border-collapse: collapse; min-width: 1000px; font-size: 12.5px; }
+table.cmp th, table.cmp td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 10px 12px; text-align: left; white-space: nowrap; }
+table.cmp th:last-child, table.cmp td:last-child { border-right: none; }
+table.cmp th { font-family: var(--font-display); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); background: var(--bg-alt); position: sticky; top: 0; font-weight: 400; }
+table.cmp td[contenteditable] { color: var(--ink); min-width: 90px; }
+table.cmp td[contenteditable]:focus { outline: 1px solid var(--accent-border); background: var(--accent-soft); }
+table.cmp td[contenteditable]:empty::before { content: attr(data-placeholder); color: var(--muted); }
+.table-actions { display: flex; gap: 10px; margin-top: 14px; }
+.mini-btn { font-family: var(--font-display); font-size: 12px; background: var(--surface); border: 1px solid var(--border-strong); color: var(--ink-soft); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+.mini-btn:hover { border-color: var(--accent-border); color: var(--accent-2); }
+.table-note { font-size: 12.5px; color: var(--muted); margin-top: 12px; max-width: 68ch; line-height: 1.5; }
+
+.final { justify-content: center; text-align: center; align-items: center; }
+.final-title { font-family: var(--font-display); font-size: clamp(22px,3.2vw,32px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0a0a0a; font-family: var(--font-display); font-weight: 500; font-size: 14.5px; text-decoration: none; border-radius: 999px; padding: 14px 26px; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
+.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+
+@media (max-width: 700px) { .sheet { padding: 40px 20px; } .page-num { display: none; } }
+@media print {
+  body { background: var(--bg); }
+  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
+  .table-actions { display: none; }
+  .check-item, .guide-block { break-inside: avoid; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <section class="sheet cover">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow">Бесплатный материал</div>
+    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
+      <h1 class="cover-title">Не покупай рекламу в Telegram, пока не проверишь <span class="accent">эти 12 пунктов</span></h1>
+    </div>
+    <p class="cover-subtitle">Инструкция и таблица сравнения — чтобы выбирать каналы для закупа по цифрам, а не на глаз.</p>
+    <div class="cover-meta">
+      <span><strong>12</strong> проверок</span>
+      <span><strong>5</strong> вопросов</span>
+      <span><strong>1</strong> таблица сравнения</span>
+    </div>
+    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
+  </section>
+
+  <!-- 12 CHECKS -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">12 пунктов</div>
+      <h2 class="page-title">Что проверять перед тем, как платить</h2>
+      <p class="page-lead">Большинство сливов бюджета случаются не из-за плохого объявления, а из-за того, что канал не проверили заранее. Пройдите эти 12 пунктов по каждому каналу-кандидату.</p>
+    </div>
+    <div id="checksWrap"></div>
+    <div class="page-num">02 / 06</div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Инструкция</div>
+      <h2 class="page-title">Как этим пользоваться на практике</h2>
+    </div>
+    <div class="guide-block">
+      <h3>Какие каналы отбрасывать сразу</h3>
+      <ul>
+        <li>Нет открытой статистики или админ уклоняется от вопросов про охваты</li>
+        <li>Подписчики растут резкими скачками без видимого повода — похоже на накрутку</li>
+        <li>Реклама выходит почти в каждом посте — аудитория выгорела от рекламы</li>
+        <li>Средний охват поста заметно ниже 10–15% от числа подписчиков без внятной причины</li>
+      </ul>
+    </div>
+    <div class="guide-block">
+      <h3>На какие показатели смотреть в первую очередь</h3>
+      <p>Не на число подписчиков, а на охват поста относительно подписчиков, ER (вовлечённость), динамику подписчиков за 2–3 месяца и то, сколько уже стоит реклама в канале за последний месяц.</p>
+    </div>
+    <div class="guide-block">
+      <h3>Почему большое число подписчиков ничего не гарантирует</h3>
+      <p>Часть аудитории может быть неактивной, накрученной или набранной под другую тематику. Канал на 5 000 живых и вовлечённых подписчиков часто продаёт лучше, чем канал на 50 000 мёртвых.</p>
+    </div>
+    <div class="guide-block">
+      <h3>Как сравнить несколько размещений между собой</h3>
+      <p>Сведите все каналы в одну таблицу и считайте не абсолютную цену размещения, а CPM (цену за 1000 охвата) и ER. Сравнивайте именно эти два числа между каналами — цена размещения сама по себе ни о чём не говорит.</p>
+    </div>
+    <div class="guide-block">
+      <h3>Сколько можно заплатить за рекламу</h3>
+      <p>Отталкивайтесь от своей экономики, а не от прайса канала: посчитайте, сколько вам может стоить один подписчик, чтобы реклама окупилась — и сравнивайте прогнозную стоимость подписчика в канале с этой цифрой, а не наоборот.</p>
+    </div>
+    <div class="page-num">03 / 06</div>
+  </section>
+
+  <!-- TABLE -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Инструмент</div>
+      <h2 class="page-title">Таблица сравнения каналов</h2>
+      <p class="page-lead">Заполняйте прямо здесь — ячейки редактируются. Данные сохраняются в этом браузере. Также можно скопировать строки в Google Таблицы.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="cmp" id="cmpTable">
+        <thead>
+          <tr>
+            <th>Канал</th><th>Тематика</th><th>Подписчики</th><th>Средний охват</th><th>Стоимость</th>
+            <th>CPM</th><th>ER</th><th>Динамика подписчиков</th><th>Совпадение ЦА</th><th>Рекл. нагрузка</th><th>Оценка</th><th>Решение</th>
+          </tr>
+        </thead>
+        <tbody id="cmpBody"></tbody>
+      </table>
+    </div>
+    <div class="table-actions">
+      <button class="mini-btn" id="addRow">+ добавить канал</button>
+      <button class="mini-btn" id="clearTable">Очистить таблицу</button>
+    </div>
+    <p class="table-note">CPM = стоимость размещения / средний охват × 1000. ER = (реакции + комментарии) / охват × 100%. «Решение» — берём / думаем / отказ.</p>
+    <div class="page-num">04 / 06</div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sheet final">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
+    <h2 class="final-title">Выбор канала — только часть закупа</h2>
+    <p class="final-lead">Дальше — как договариваться о размещении, готовить рекламную подачу и не сливать бюджет на плохом креативе. Это разбирается в модуле «Продвижение Telegram-канала» курса Total Telegram.</p>
+    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
+      Посмотреть курс Total Telegram
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var CHECKS = [
+    { h: "Тематика совпадает с вашей аудиторией", p: "Не «примерно похожая», а буквально та аудитория, которой вы продаёте." },
+    { h: "Подписчики живые, а не накрученные", p: "Посмотрите график роста в статистике канала — резкие скачки без повода — плохой знак." },
+    { h: "Средний охват поста относительно подписчиков", p: "Здоровый ориентир — от 10–15% подписчиков видят обычный пост." },
+    { h: "ER — вовлечённость", p: "Реакции и комментарии относительно охвата. Низкий ER — аудитория присутствует, но не читает." },
+    { h: "Динамика подписчиков", p: "Растёт, стоит на месте или падает за последние 2–3 месяца." },
+    { h: "Рекламная нагрузка канала", p: "Сколько рекламы уже выходит. Реклама в каждом посте — аудитория выгорела." },
+    { h: "CPM размещения", p: "Стоимость за 1000 охвата — а не абсолютная цена поста." },
+    { h: "Формат размещения", p: "Нативная интеграция обычно работает лучше прямой рекламной вставки." },
+    { h: "Тон канала не противоречит продукту", p: "Резкий несовпадающий тон снижает доверие к рекламе, даже если аудитория подходит." },
+    { h: "История похожих размещений", p: "Спросите админа, кто уже размещался с похожим продуктом и как это сработало." },
+    { h: "Отзывы других рекламодателей", p: "Отзывы о канале как площадке — не о продукте, который там рекламировали." },
+    { h: "Что происходит с постом после публикации", p: "Держится ли реклама в канале заявленное время или админ её тихо удаляет раньше." },
+  ];
+
+  function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
+
+  function renderChecks() {
+    var wrap = document.getElementById("checksWrap");
+    wrap.innerHTML = CHECKS.map(function (c, i) {
+      return (
+        '<div class="check-item">' +
+        '<span class="check-num">' + (i + 1) + '</span>' +
+        '<div class="check-body"><h3>' + esc(c.h) + '</h3><p>' + esc(c.p) + '</p></div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  var COLS = 12;
+  var STORAGE_KEY = "tt_channel_table_v1";
+
+  function makeRow(values) {
+    var tr = document.createElement("tr");
+    for (var i = 0; i < COLS; i++) {
+      var td = document.createElement("td");
+      td.contentEditable = "true";
+      td.setAttribute("data-placeholder", i === 0 ? "название" : "—");
+      td.textContent = (values && values[i]) || "";
+      tr.appendChild(td);
+    }
+    return tr;
+  }
+
+  function saveTable() {
+    var body = document.getElementById("cmpBody");
+    var rows = Array.prototype.map.call(body.children, function (tr) {
+      return Array.prototype.map.call(tr.children, function (td) { return td.textContent; });
+    });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(rows)); } catch (e) {}
+  }
+
+  function loadTable() {
+    var body = document.getElementById("cmpBody");
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch (e) {}
+    var rows = saved && saved.length ? saved : [[], [], [], [], []];
+    rows.forEach(function (r) { body.appendChild(makeRow(r)); });
+    body.addEventListener("input", saveTable);
+  }
+
+  document.getElementById("addRow").addEventListener("click", function () {
+    document.getElementById("cmpBody").appendChild(makeRow());
+    saveTable();
+  });
+  document.getElementById("clearTable").addEventListener("click", function () {
+    var body = document.getElementById("cmpBody");
+    body.innerHTML = "";
+    for (var i = 0; i < 5; i++) body.appendChild(makeRow());
+    saveTable();
+  });
+
+  renderChecks();
+  loadTable();
+})();
+</script>
+</body>
+</html>

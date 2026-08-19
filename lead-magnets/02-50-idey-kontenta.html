@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>50 идей контента для Telegram</title>
+<meta name="description" content="Бесплатная матрица: 5 типов контента × 10 готовых идей на каждый, чтобы не думать, что публиковать в Telegram-канале. От Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607; --bg-alt: #0b0c0f; --surface: #101114;
+  --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+  --ink: #f5f5f7; --ink-soft: rgba(245,245,247,0.72); --muted: rgba(245,245,247,0.48);
+  --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var(--ink); -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.doc { max-width: 900px; margin: 0 auto; }
+.sheet {
+  background: var(--bg);
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  padding: 64px 72px; min-height: 100vh; position: relative;
+  page-break-after: always; break-after: page;
+  display: flex; flex-direction: column;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11.5px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); background: var(--accent-soft);
+  border: 1px solid var(--accent-border); border-radius: 4px; padding: 8px 14px; width: fit-content;
+}
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; padding: 8px 12px; width: fit-content; }
+.logo span { color: var(--accent); }
+.cover { justify-content: center; align-items: center; text-align: center; }
+.cover .logo { margin: 0 auto 48px; } .cover .eyebrow { margin: 0 auto 28px; }
+.cover-frame { display: inline-block; padding: 32px clamp(20px,5vw,56px); margin-bottom: 32px; }
+.cover-title { font-family: var(--font-display); font-size: clamp(28px,4.2vw,44px); font-weight: 600; text-transform: uppercase; line-height: 1.15; margin: 0; max-width: 17ch; }
+.cover-title .accent { color: var(--accent); }
+.cover-subtitle { font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 48ch; margin: 0 auto 40px; }
+.cover-meta { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
+.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
+.cover-author strong { color: var(--ink-soft); }
+.page-head { margin-bottom: 32px; }
+.page-title { font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
+.page-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; margin: 14px 0 0; }
+.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+.matrix-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 8px; }
+.matrix-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 14px; }
+.matrix-card .n { font-family: var(--font-display); font-size: 11px; color: var(--accent-2); margin-bottom: 8px; }
+.matrix-card h3 { font-size: 13.5px; margin: 0 0 6px; }
+.matrix-card p { font-size: 11.5px; line-height: 1.4; color: var(--muted); margin: 0; }
+
+.type-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--border-strong); }
+.type-badge { font-family: var(--font-display); font-size: 12px; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; padding: 4px 11px; flex-shrink: 0; }
+.type-title { font-family: var(--font-display); font-size: 17px; font-weight: 500; text-transform: uppercase; }
+.type-sub { font-size: 13px; color: var(--muted); margin: 4px 0 0; }
+
+.idea-item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; cursor: pointer; user-select: none; }
+.idea-num { font-family: var(--font-display); font-size: 12px; color: var(--muted); width: 22px; flex-shrink: 0; margin-top: 1px; }
+.idea-box { width: 18px; height: 18px; border: 1.5px solid var(--border-strong); border-radius: 5px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; transition: border-color .15s, background .15s; }
+.idea-box svg { opacity: 0; transform: scale(.5); transition: opacity .15s, transform .15s; color: var(--bg); }
+.idea-item.is-checked .idea-box { background: var(--accent); border-color: var(--accent); }
+.idea-item.is-checked .idea-box svg { opacity: 1; transform: scale(1); }
+.idea-item span.idea-text { font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
+.idea-item.is-checked span.idea-text { color: var(--ink); text-decoration: line-through; text-decoration-color: var(--border-strong); }
+
+.rhythm-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.rhythm-table th, .rhythm-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+.rhythm-table th { font-family: var(--font-display); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.rhythm-table td:first-child { font-family: var(--font-display); font-size: 12.5px; color: var(--accent-2); }
+.rhythm-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
+
+.final { justify-content: center; text-align: center; align-items: center; }
+.final-title { font-family: var(--font-display); font-size: clamp(22px,3.2vw,32px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0a0a0a; font-family: var(--font-display); font-weight: 500; font-size: 14.5px; text-decoration: none; border-radius: 999px; padding: 14px 26px; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
+.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+
+@media (max-width: 700px) { .sheet { padding: 40px 24px; } .matrix-grid { grid-template-columns: repeat(2,1fr); } .page-num { display: none; } .rhythm-table { font-size: 12px; } }
+@media print {
+  body { background: var(--bg); }
+  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
+  .idea-item { break-inside: avoid; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="doc" id="doc">
+
+  <!-- COVER -->
+  <section class="sheet cover">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow">Бесплатный материал</div>
+    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
+      <h1 class="cover-title">50 идей контента <span class="accent">для Telegram</span></h1>
+    </div>
+    <p class="cover-subtitle">Матрица на случай, когда открыл канал и не понимаешь, что писать. 5 типов контента, по 10 готовых идей в каждом — с примером на каждую.</p>
+    <div class="cover-meta">
+      <span><strong>50</strong> идей</span>
+      <span><strong>5</strong> типов</span>
+      <span><strong>+</strong> ритм на неделю</span>
+    </div>
+    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
+  </section>
+
+  <!-- HOW TO -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Как этим пользоваться</div>
+      <h2 class="page-title">Не «о чём написать», а «какую задачу закрыть»</h2>
+      <p class="page-lead">Контент в Telegram работает не как случайные посты, а как система из пяти смысловых типов. У каждого своя задача — и раз в неделю каналу нужны все пять, а не один. Найдите нужный тип, возьмите идею, адаптируйте под себя.</p>
+    </div>
+    <div class="matrix-grid">
+      <div class="matrix-card"><div class="n">01</div><h3>Продающий</h3><p>Оффер, кейс, отзыв, дедлайн</p></div>
+      <div class="matrix-card"><div class="n">02</div><h3>Обучающий</h3><p>Как сделать, разбор ошибки, инструкция</p></div>
+      <div class="matrix-card"><div class="n">03</div><h3>Вовлекающий</h3><p>Опрос, вопрос, игра, выбор из двух</p></div>
+      <div class="matrix-card"><div class="n">04</div><h3>Развлекающий</h3><p>Мем, история, инсайд из индустрии</p></div>
+      <div class="matrix-card"><div class="n">05</div><h3>Репутационный</h3><p>Цифры, доказательства, процесс изнутри</p></div>
+    </div>
+    <p class="page-lead" style="margin-top:24px;">Отмечайте идеи, которые уже использовали — на экране это же считает счётчик, на бумаге просто ставьте галочку.</p>
+    <div class="page-num">02 / 08</div>
+  </section>
+
+  <!-- TYPE PAGES will be rendered here via JS: 5 pages -->
+  <div id="typePages"></div>
+
+  <!-- RHYTHM -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Бонус</div>
+      <h2 class="page-title">Как распределить 5 типов на неделю</h2>
+      <p class="page-lead">Это не правило курса, а стартовая точка: если совсем не знаете, с чего начать ритм публикаций, возьмите эту раскладку и подстройте под свой канал.</p>
+    </div>
+    <table class="rhythm-table">
+      <thead><tr><th>День</th><th>Тип контента</th><th>Зачем</th></tr></thead>
+      <tbody>
+        <tr><td>Понедельник</td><td>Обучающий</td><td>Начало недели — время для пользы, не для продажи</td></tr>
+        <tr><td>Вторник</td><td>Вовлекающий</td><td>Разогнать реакции и комментарии после будних постов</td></tr>
+        <tr><td>Среда</td><td>Продающий</td><td>Середина недели — рабочее настроение, меньше сопротивления офферу</td></tr>
+        <tr><td>Четверг</td><td>Репутационный</td><td>Укрепить доверие перед выходными затишьем</td></tr>
+        <tr><td>Пятница</td><td>Развлекающий</td><td>Пятничное настроение — легче заходит лёгкий контент</td></tr>
+        <tr><td>Суббота / Воскресенье</td><td>Свободно</td><td>Пропуск, Stories или то, что откликается по настроению</td></tr>
+      </tbody>
+    </table>
+    <p class="rhythm-note">Если публикуете реже одного раза в день — просто идите по порядку типов из этой таблицы, пропуская выходные.</p>
+    <div class="page-num">08 / 08</div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sheet final">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
+    <h2 class="final-title">50 идей закрывают контент. А дальше?</h2>
+    <p class="final-lead">Контент — только один из семи блоков системы. Дальше — упаковка, продвижение, Telegram Ads и монетизация. Всё это разбирается по шагам в курсе Total Telegram.</p>
+    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
+      Посмотреть курс Total Telegram
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var TYPES = [
+    {
+      badge: "01", title: "Продающий", sub: "Задача — продать. Оффер, кейс, отзыв, дедлайн.", num: "03/08",
+      ideas: [
+        "Разберите главную ошибку клиента до покупки продукта",
+        "Покажите «было / стало» на реальном кейсе — с цифрами",
+        "Оффер с дедлайном: что получит подписавшийся сегодня, а не через неделю",
+        "Соберите 3 реальных отзыва в один пост-доказательство",
+        "Сравните «сделать самому» и «сделать с вами» — честно, без давления",
+        "Разберите частое возражение и закройте его фактами, а не уговорами",
+        "Покажите процесс работы с клиентом от заявки до результата",
+        "Кружок на 60 секунд: расскажите об одном конкретном результате клиента",
+        "Опрос «что мешает начать» — а в следующем посте закройте топ-ответ офером",
+        "Пост-ограничение: доступно только тем, кто напишет кодовое слово в комментариях",
+      ],
+    },
+    {
+      badge: "02", title: "Обучающий", sub: "Задача — научить. Как сделать, разбор ошибки, инструкция, чек-лист.", num: "04/08",
+      ideas: [
+        "Пошаговая инструкция: как сделать конкретную задачу за 15 минут",
+        "Разбор чужой ошибки — без имён, но с конкретным разбором",
+        "Мини чек-лист на 5–7 пунктов, который можно закрыть здесь и сейчас",
+        "«Было — стало»: как поменялся ваш подход за последний год и почему",
+        "Сравнение двух методов решения одной задачи: плюсы и минусы каждого",
+        "Разбор одного вопроса из комментариев — подробно, на реальном примере",
+        "Карусель-гайд на 5–8 карточек по одному конкретному шагу",
+        "Лонгрид-разбор: весь процесс от начала до результата, без сокращений",
+        "«3 вещи, которые я делаю не так, как все» — и почему это работает",
+        "Голосовое на 2–3 минуты: разбор одной темы без монтажа, как есть",
+      ],
+    },
+    {
+      badge: "03", title: "Вовлекающий", sub: "Задача — вовлечь. Опрос, вопрос в комментарии, игра, выбор из двух.", num: "05/08",
+      ideas: [
+        "Опрос с двумя вариантами по спорному вопросу в вашей нише",
+        "«Закончите фразу» — вопрос в комментарии, на который легко ответить за 5 секунд",
+        "Выбор из двух: покажите два подхода и спросите, какой ближе аудитории",
+        "Мини-игра «угадай результат» до того, как покажете разбор",
+        "Попросите поделиться личным опытом по теме — соберите ответы в следующий пост",
+        "Stories с вопросом «что разобрать дальше» — дайте выбрать аудитории",
+        "«Ошибка или нет» — покажите ситуацию и спросите мнение до разбора",
+        "Мини-викторина на 3 вопроса по теме канала с разбором ответов в комментариях",
+        "Попросите поставить реакцию на пост в зависимости от своей ситуации",
+        "Опрос-голосование по формату или теме следующего материала на канале",
+      ],
+    },
+    {
+      badge: "04", title: "Развлекающий", sub: "Задача — развлечь. Мем, история, инсайд из индустрии.", num: "06/08",
+      ideas: [
+        "Мем по актуальной для ниши ситуации — без искусственного юмора",
+        "Забавная история из практики — с реальным, неидеальным финалом",
+        "Инсайд: то, что обычно не рассказывают клиентам или подписчикам",
+        "«Что бесит в нише» — короткий эмоциональный пост от первого лица",
+        "Курьёзный случай из работы — коротко, без нравоучений в конце",
+        "Сравнение «ожидание / реальность» на тему из вашей ниши",
+        "Видеокружок с реакцией на популярный тренд в нише",
+        "Подборка коротких фраз, которые часто звучат в вашей работе",
+        "«Если бы моя ниша была человеком» — лёгкий концептуальный пост",
+        "Закулисье: фото или видео рабочего процесса без прикрас",
+      ],
+    },
+    {
+      badge: "05", title: "Репутационный", sub: "Задача — укрепить доверие. Цифры, доказательства, процесс изнутри.", num: "07/08",
+      ideas: [
+        "Итоги месяца или квартала в цифрах — честно, включая то, что не получилось",
+        "Процесс принятия решения на реальном примере: как вы пришли к выводу",
+        "Показать инструменты или методы, которыми пользуетесь сами",
+        "Рассказать, чему научились за последний месяц — конкретно, не абстрактно",
+        "Разбор своей же ошибки: что сделали не так и что изменили после",
+        "Публичная фиксация цели — что планируете сделать и к какому сроку",
+        "Пост-разбор: что дала конкретная коллаборация или совместный проект",
+        "Показать «до» — с чего начинали, без прикрас",
+        "Рассказать о принципе, которого придерживаетесь, и почему именно он",
+        "Развёрнуто ответить на самый частый вопрос от аудитории за месяц",
+      ],
+    },
+  ];
+
+  var checkSvg = '<svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.2 11.5L13 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
+
+  function render() {
+    var wrap = document.getElementById("typePages");
+    wrap.innerHTML = TYPES.map(function (t) {
+      var ideas = t.ideas.map(function (text, i) {
+        return (
+          '<label class="idea-item">' +
+          '<span class="idea-num">' + String(i + 1).padStart(2, "0") + '</span>' +
+          '<span class="idea-box">' + checkSvg + '</span>' +
+          '<span class="idea-text">' + esc(text) + '</span>' +
+          '</label>'
+        );
+      }).join("");
+      return (
+        '<section class="sheet">' +
+        '<div class="page-head"><div class="eyebrow">Тип ' + t.badge + ' из 5</div>' +
+        '<h2 class="page-title">' + esc(t.title) + '</h2>' +
+        '<p class="page-lead">' + esc(t.sub) + '</p></div>' +
+        '<div>' + ideas + '</div>' +
+        '<div class="page-num">' + t.num + '</div>' +
+        '</section>'
+      );
+    }).join("");
+
+    wrap.querySelectorAll(".idea-item").forEach(function (item) {
+      item.addEventListener("click", function () { item.classList.toggle("is-checked"); });
+    });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
