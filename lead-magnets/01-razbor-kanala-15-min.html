@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Разбор Telegram-канала за 15 минут — чек-лист | Total Telegram</title>
+<meta name="description" content="Бесплатный чек-лист из 30 пунктов: проверьте название, аватар, описание, закреп, навигацию, контент, CTA и готовность канала к рекламе. От Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607;
+  --bg-alt: #0b0c0f;
+  --surface: #101114;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --ink: #f5f5f7;
+  --ink-soft: rgba(245, 245, 247, 0.72);
+  --muted: rgba(245, 245, 247, 0.48);
+  --accent: #ff4d1f;
+  --accent-2: #ff7a45;
+  --accent-soft: rgba(255, 77, 31, 0.12);
+  --accent-border: rgba(255, 77, 31, 0.4);
+  --green: #3ddc84;
+  --green-soft: rgba(61, 220, 132, 0.12);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #1a1a1a;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.doc { max-width: 900px; margin: 0 auto; }
+
+.sheet {
+  background: var(--bg);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  padding: 64px 72px;
+  min-height: 100vh;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.sheet + .sheet { margin-top: 24px; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 8px 14px;
+  width: fit-content;
+}
+
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; }
+.brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; }
+.brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 8px 12px;
+  width: fit-content;
+}
+.logo span { color: var(--accent); }
+
+/* ---------- COVER ---------- */
+.cover { justify-content: center; align-items: center; text-align: center; }
+.cover .logo { margin: 0 auto 48px; }
+.cover .eyebrow { margin: 0 auto 28px; }
+.cover-frame { display: inline-block; padding: 32px clamp(20px, 5vw, 56px); margin-bottom: 32px; }
+.cover-title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 16ch;
+}
+.cover-title .accent { color: var(--accent); }
+.cover-subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 0 auto 40px;
+}
+.cover-meta {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
+.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
+.cover-author strong { color: var(--ink-soft); }
+
+/* ---------- SECTION HEAD ---------- */
+.page-head { margin-bottom: 36px; }
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 14px 0 0;
+}
+.page-lead { font-size: 15.5px; line-height: 1.6; color: var(--ink-soft); max-width: 60ch; margin: 14px 0 0; }
+.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+/* ---------- HOW-TO ---------- */
+.howto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+.howto-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+.howto-num { font-family: var(--font-display); font-size: 12px; color: var(--accent-2); margin-bottom: 10px; }
+.howto-card h3 { font-size: 15px; margin: 0 0 8px; }
+.howto-card p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+
+.scale-legend { display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
+.scale-row { display: flex; align-items: center; gap: 14px; font-size: 14px; }
+.scale-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.scale-row .range { font-family: var(--font-display); font-size: 12.5px; color: var(--ink); width: 90px; flex-shrink: 0; }
+.scale-row .desc { color: var(--ink-soft); }
+
+/* ---------- CATEGORY / CHECKLIST ---------- */
+.categories { display: flex; flex-direction: column; gap: 30px; }
+.cat-block { }
+.cat-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border-strong); }
+.cat-badge {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--accent-2);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  padding: 4px 11px;
+  flex-shrink: 0;
+}
+.cat-title { font-family: var(--font-display); font-size: 15.5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.01em; }
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 9px 0;
+  cursor: pointer;
+  user-select: none;
+}
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.check-box svg { opacity: 0; transform: scale(0.5); transition: opacity 0.15s ease, transform 0.15s ease; color: var(--bg); }
+.check-item.is-checked .check-box { background: var(--accent); border-color: var(--accent); }
+.check-item.is-checked .check-box svg { opacity: 1; transform: scale(1); }
+.check-item span.check-text { font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
+.check-item.is-checked span.check-text { color: var(--ink); }
+
+/* ---------- SCORE PILL (screen only) ---------- */
+.score-pill {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 50;
+  background: rgba(16, 17, 20, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.score-pill strong { color: var(--accent-2); }
+
+/* ---------- RESULT PAGE ---------- */
+.result-score {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 10vw, 96px);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.result-score span { font-size: 0.35em; color: var(--muted); font-weight: 400; }
+.result-bands { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+.band {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  background: var(--surface);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+.band.is-active { opacity: 1; border-color: var(--accent-border); background: linear-gradient(180deg, var(--accent-soft), var(--surface) 60%); }
+.band-range { font-family: var(--font-display); font-size: 12.5px; color: var(--accent-2); margin-bottom: 6px; }
+.band h3 { font-size: 16px; margin: 0 0 6px; }
+.band p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+
+/* ---------- FINAL CTA ---------- */
+.final { justify-content: center; text-align: center; align-items: center; }
+.final-title { font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 34px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15.5px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 14.5px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 14px 26px;
+  box-shadow: 0 10px 24px -10px rgba(255, 95, 31, 0.55);
+}
+.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+
+@media (max-width: 700px) {
+  .sheet { padding: 40px 24px; }
+  .howto-grid { grid-template-columns: 1fr; }
+  .page-num { display: none; }
+}
+
+@media print {
+  body { background: var(--bg); }
+  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
+  .sheet + .sheet { margin-top: 0; }
+  .cat-block { break-inside: avoid; }
+  .score-pill { display: none; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="doc" id="doc">
+
+  <div class="score-pill" id="scorePill">Отмечено: <strong id="scoreLive">0</strong> / 30</div>
+
+  <!-- PAGE 1 — COVER -->
+  <section class="sheet cover">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow">Бесплатный материал</div>
+    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
+      <h1 class="cover-title">Разбор Telegram-канала <span class="accent">за 15 минут</span></h1>
+    </div>
+    <p class="cover-subtitle">Чек-лист из 30 пунктов. Пройдите его по своему каналу — и увидите, где именно он теряет подписчиков, доверие и рекламный трафик.</p>
+    <div class="cover-meta">
+      <span><strong>30</strong> пунктов</span>
+      <span><strong>9</strong> категорий</span>
+      <span><strong>~15</strong> минут</span>
+    </div>
+    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
+  </section>
+
+  <!-- PAGE 2 — HOW TO -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Как пользоваться</div>
+      <h2 class="page-title">Пройдите канал по 9 блокам</h2>
+      <p class="page-lead">Отмечайте пункт, если он выполнен на вашем канале. Каждая отметка — 1 балл. В конце документа посчитаете сумму и увидите расшифровку результата.</p>
+    </div>
+    <div class="howto-grid">
+      <div class="howto-card">
+        <div class="howto-num">01</div>
+        <h3>Откройте свой канал рядом</h3>
+        <p>Проходите чек-лист, глядя на реальный канал — не по памяти.</p>
+      </div>
+      <div class="howto-card">
+        <div class="howto-num">02</div>
+        <h3>Отмечайте честно</h3>
+        <p>Если пункт выполнен наполовину — считайте, что не выполнен. Это диагностика, а не оценка себя.</p>
+      </div>
+      <div class="howto-card">
+        <div class="howto-num">03</div>
+        <h3>Смотрите на пропуски</h3>
+        <p>Незакрытые пункты — это и есть конкретный план, что поправить в первую очередь.</p>
+      </div>
+    </div>
+    <div class="scale-legend">
+      <div class="scale-row"><span class="scale-dot" style="background:#ff4d1f"></span><span class="range">0–10</span><span class="desc">канал пока сложно продвигать</span></div>
+      <div class="scale-row"><span class="scale-dot" style="background:#ffb020"></span><span class="range">11–20</span><span class="desc">база есть, но часть трафика теряется</span></div>
+      <div class="scale-row"><span class="scale-dot" style="background:#3ddc84"></span><span class="range">21–30</span><span class="desc">канал готов к активному продвижению</span></div>
+    </div>
+    <div class="page-num">02 / 07</div>
+  </section>
+
+  <!-- PAGE 3 — Название / Позиционирование / Аватар -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Блоки 1–3 из 9</div>
+      <h2 class="page-title">Название, позиционирование, аватар</h2>
+    </div>
+    <div class="categories" id="cat-1-3"></div>
+    <div class="page-num">03 / 07</div>
+  </section>
+
+  <!-- PAGE 4 — Описание / Закреп / Навигация -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Блоки 4–6 из 9</div>
+      <h2 class="page-title">Описание, закреп, навигация</h2>
+    </div>
+    <div class="categories" id="cat-4-6"></div>
+    <div class="page-num">04 / 07</div>
+  </section>
+
+  <!-- PAGE 5 — Контент / CTA / Реклама -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Блоки 7–9 из 9</div>
+      <h2 class="page-title">Контент, CTA, готовность к рекламе</h2>
+    </div>
+    <div class="categories" id="cat-7-9"></div>
+    <div class="page-num">05 / 07</div>
+  </section>
+
+  <!-- PAGE 6 — RESULT -->
+  <section class="sheet">
+    <div class="page-head">
+      <div class="eyebrow">Результат</div>
+      <h2 class="page-title">Сколько баллов набрал канал</h2>
+      <p class="page-lead">Если проходите на бумаге — посчитайте отмеченные пункты вручную. Если на экране — счётчик справа сверху уже посчитал за вас.</p>
+    </div>
+    <div class="result-score" id="resultScore">0<span>/ 30</span></div>
+    <div class="result-bands">
+      <div class="band" id="band-low">
+        <div class="band-range">0–10</div>
+        <h3>Канал пока сложно продвигать</h3>
+        <p>Не хватает базовой упаковки: человек, который зашёл впервые, не понимает, куда попал и зачем оставаться. Трафик на такой канал будет уходить, не оставляя следа.</p>
+      </div>
+      <div class="band" id="band-mid">
+        <div class="band-range">11–20</div>
+        <h3>База есть, но часть трафика теряется</h3>
+        <p>Канал понятен постоянным читателям, но новый человек ещё спотыкается — на упаковке, закрепе или CTA. Обычно это 3–5 точечных правок, а не пересборка с нуля.</p>
+      </div>
+      <div class="band" id="band-high">
+        <div class="band-range">21–30</div>
+        <h3>Канал готов к активному продвижению</h3>
+        <p>Упаковка, контент и CTA работают на новый трафик. Дальше вопрос уже не «готов ли канал», а «откуда брать аудиторию и как её удерживать» — это отдельная система.</p>
+      </div>
+    </div>
+    <div class="page-num">06 / 07</div>
+  </section>
+
+  <!-- PAGE 7 — FINAL CTA -->
+  <section class="sheet final">
+    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
+    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
+    <h2 class="final-title">Диагностика — это старт, а не финиш</h2>
+    <p class="final-lead">Чек-лист показывает, где канал теряет людей. А дальше — вопросы посложнее: что публиковать системно, где брать трафик, как не слить бюджет на рекламу и как всё это в итоге монетизировать. Это уже не один пункт, а целая система — ей посвящён курс Total Telegram: от упаковки и контента до Telegram Ads и монетизации.</p>
+    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
+      Посмотреть курс Total Telegram
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var CATEGORIES = [
+    {
+      id: "cat-1-3",
+      groups: [
+        {
+          badge: "01", title: "Название", items: [
+            "Название + короткое пояснение сразу объясняют, о чём канал",
+            "Тематика считывается однозначно — без двойных трактовок",
+            "Название не теряется среди похожих каналов в нише",
+          ],
+        },
+        {
+          badge: "02", title: "Позиционирование", items: [
+            "Понятно, кто ведёт канал и почему ему можно доверять",
+            "Есть внятный ответ на вопрос «чем этот канал отличается от других в нише»",
+            "Тон и роль автора не меняются от поста к посту",
+          ],
+        },
+        {
+          badge: "03", title: "Аватар", items: [
+            "Аватар выделяется на фоне других каналов в подборках и поиске",
+            "Аватар считывается в маленьком размере — минимум деталей, максимум сути",
+            "Аватар визуально совпадает с тематикой и позиционированием канала",
+          ],
+        },
+      ],
+    },
+    {
+      id: "cat-4-6",
+      groups: [
+        {
+          badge: "04", title: "Описание", items: [
+            "В описании закрыт вопрос «о чём канал» в первые секунды чтения",
+            "В описании есть чёткое УТП — почему стоит остаться именно здесь",
+            "В описании есть лид-магнит или повод подписаться прямо сейчас",
+            "В описании есть контакты для связи — реклама, сотрудничество, вопросы",
+          ],
+        },
+        {
+          badge: "05", title: "Закреп", items: [
+            "Есть закреплённое сообщение — новый подписчик не листает ленту в поисках сути",
+            "В закрепе есть оффер: что человек получит, оставшись на канале",
+            "Закреп актуален и не ссылается на прошедшие акции и старые посты",
+          ],
+        },
+        {
+          badge: "06", title: "Навигация", items: [
+            "Есть навигация по каналу — подборка ключевых постов по темам",
+            "Навигация доступна за 1–2 клика от подписки",
+            "Ссылка на канал короткая и понятная — легко продиктовать или вспомнить",
+          ],
+        },
+      ],
+    },
+    {
+      id: "cat-7-9",
+      groups: [
+        {
+          badge: "07", title: "Контент", items: [
+            "На канале используется больше одного формата публикации, не только текст",
+            "Формат ведения канала считывается за 3–5 постов — вайб понятен",
+            "В ленте есть и продающий, и обучающий, и вовлекающий контент",
+            "Есть репутационный контент — то, что формирует доверие к автору",
+            "Публикации выходят по видимой логике, а не хаотично",
+          ],
+        },
+        {
+          badge: "08", title: "CTA", items: [
+            "В постах есть явный призыв к действию, а не только информация",
+            "CTA ведёт к конкретному следующему шагу — подписка, бот, ссылка, сообщение",
+            "Разные посты ведут к разным целевым действиям, а не только «подписывайся»",
+          ],
+        },
+        {
+          badge: "09", title: "Подготовка к рекламе", items: [
+            "Канал выдержит первый взгляд человека, который зашёл с рекламы",
+            "Есть посты, на которые не стыдно вести платный трафик",
+            "Понятно, куда приведёт реклама — на конкретный пост, а не в пустую ленту",
+          ],
+        },
+      ],
+    },
+  ];
+
+  var checkSvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.2 11.5L13 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function esc(str) {
+    var d = document.createElement("div");
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function render() {
+    CATEGORIES.forEach(function (page) {
+      var wrap = document.getElementById(page.id);
+      if (!wrap) return;
+      wrap.innerHTML = page.groups.map(function (g) {
+        var items = g.items.map(function (text) {
+          return (
+            '<label class="check-item">' +
+            '<span class="check-box">' + checkSvg + '</span>' +
+            '<span class="check-text">' + esc(text) + '</span>' +
+            '</label>'
+          );
+        }).join("");
+        return (
+          '<div class="cat-block">' +
+          '<div class="cat-head"><span class="cat-badge">' + g.badge + '</span><span class="cat-title">' + esc(g.title) + '</span></div>' +
+          items +
+          '</div>'
+        );
+      }).join("");
+    });
+  }
+
+  function setupChecks() {
+    var items = document.querySelectorAll(".check-item");
+    var scoreLive = document.getElementById("scoreLive");
+    var resultScore = document.getElementById("resultScore");
+    var bands = {
+      low: document.getElementById("band-low"),
+      mid: document.getElementById("band-mid"),
+      high: document.getElementById("band-high"),
+    };
+
+    function update() {
+      var count = document.querySelectorAll(".check-item.is-checked").length;
+      if (scoreLive) scoreLive.textContent = String(count);
+      if (resultScore) resultScore.innerHTML = count + '<span>/ 30</span>';
+      Object.keys(bands).forEach(function (k) { if (bands[k]) bands[k].classList.remove("is-active"); });
+      var active = count <= 10 ? bands.low : count <= 20 ? bands.mid : bands.high;
+      if (active) active.classList.add("is-active");
+    }
+
+    items.forEach(function (item) {
+      item.addEventListener("click", function () {
+        item.classList.toggle("is-checked");
+        update();
+      });
+    });
+
+    update();
+  }
+
+  render();
+  setupChecks();
+})();
+</script>
+</body>
+</html>

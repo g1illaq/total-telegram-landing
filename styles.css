@@ -348,6 +348,8 @@ a { color: inherit; }
 /* =========================================================
    PAIN POINTS
    ========================================================= */
+#pain { background: radial-gradient(ellipse at top, var(--accent-soft), transparent 60%), var(--bg); }
+
 .pain-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -363,17 +365,19 @@ a { color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px 22px;
+  transition: border-color 0.2s ease;
 }
+.pain-card:hover { border-color: var(--accent-border); }
 
 .pain-quote-mark {
   font-family: var(--font-mono);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--accent);
   line-height: 1;
   flex-shrink: 0;
 }
 
-.pain-card p { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-soft); }
+.pain-card p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--ink); }
 
 .pain-conclusion {
   text-align: center;
@@ -551,6 +555,8 @@ a { color: inherit; }
 /* =========================================================
    ECOSYSTEM
    ========================================================= */
+#ecosystem { background: radial-gradient(ellipse at top, var(--tg-blue-soft), transparent 60%), var(--bg-alt); }
+
 .eco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
 .eco-card {
@@ -612,7 +618,7 @@ a { color: inherit; }
 .author-photo {
   aspect-ratio: 3/4;
   border-radius: var(--radius);
-  border: 1px dashed var(--border-strong);
+  border: 1px solid var(--border-strong);
   background: var(--surface);
   display: flex;
   align-items: center;
@@ -622,7 +628,9 @@ a { color: inherit; }
   font-size: 12px;
   text-align: center;
   padding: 20px;
+  overflow: hidden;
 }
+.author-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--radius) - 1px); }
 
 .author-name { font-size: 26px; font-weight: 700; margin: 0 0 4px; }
 .author-role { font-size: 14.5px; color: var(--accent-2); font-family: var(--font-mono); margin: 0 0 20px; }
