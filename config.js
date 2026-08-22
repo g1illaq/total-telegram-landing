@@ -190,11 +190,10 @@ window.TT_CONTENT = {
   ],
 
   pricing: [
-    { name: "Тариф 1", price: "TODO", oldPrice: null, installment: "TODO: рассрочка", features: ["TODO: наполнение тарифа", "TODO: наполнение тарифа", "TODO: наполнение тарифа"], featured: false, cta: "Записаться" },
-    { name: "Тариф 2", price: "TODO", oldPrice: null, installment: "TODO: рассрочка", features: ["TODO: наполнение тарифа", "TODO: наполнение тарифа", "TODO: наполнение тарифа", "TODO: наполнение тарифа"], featured: true, cta: "Записаться" },
-    { name: "Тариф 3", price: "TODO", oldPrice: null, installment: "TODO: рассрочка", features: ["TODO: наполнение тарифа", "TODO: наполнение тарифа", "TODO: наполнение тарифа"], featured: false, cta: "Записаться" },
+    { name: "Стандарт", price: "4 970 ₽", oldPrice: null, installment: null, features: ["Доступ ко всем материалам курса"], featured: false, cta: "Записаться" },
+    { name: "VIP", price: "29 700 ₽", oldPrice: null, installment: null, features: ["Доступ к курсу", "Личный разбор канала (после обучения)", "Консультация"], featured: false, cta: "Записаться" },
   ],
-  pricingNote: "Стоимость, состав и условия рассрочки уточняются — структура карточек готова к наполнению реальными данными.",
+  pricingNote: "",
 
   faq: [
     {

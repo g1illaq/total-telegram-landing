@@ -201,7 +201,10 @@
   function renderPricing() {
     var wrap = document.getElementById("pricingGrid");
     var note = document.getElementById("pricingNote");
-    if (note) note.textContent = DATA.pricingNote;
+    if (note) {
+      note.textContent = DATA.pricingNote;
+      note.style.display = DATA.pricingNote ? "" : "none";
+    }
     if (!wrap) return;
     wrap.innerHTML = DATA.pricing.map(function (p) {
       var features = p.features.map(function (f) {
@@ -215,7 +218,7 @@
         (p.featured ? '<span class="price-popular-tag">Популярный</span>' : "") +
         '<h3 class="price-name">' + esc(p.name) + "</h3>" +
         '<div class="price-value">' + priceLine + "</div>" +
-        '<p class="price-installment">' + esc(p.installment) + "</p>" +
+        (p.installment ? '<p class="price-installment">' + esc(p.installment) + "</p>" : "") +
         '<ul class="price-features">' + features + "</ul>" +
         '<a href="#faq" class="btn ' + (p.featured ? "btn-primary" : "btn-ghost") + '">' + esc(p.cta) + "</a>" +
         "</div>"
