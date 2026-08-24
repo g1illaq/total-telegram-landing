@@ -161,12 +161,11 @@ window.TT_CONTENT = {
 
   author: {
     name: "Ахмад Макеев",
-    role: "TODO: должность/позиционирование автора",
-    bio: "TODO: описание опыта автора — добавить на основе подтверждённых материалов",
+    role: "Автор Telegram-канала на 16 000+ подписчиков",
+    bio: "Ведёт собственный Telegram-канал с аудиторией 16 000+ подписчиков и уже 3–4 года зарабатывает на Telegram. В курсе делится не теорией со стороны, а системой, которую выстроил и использует сам.",
     stats: [
-      { value: "TODO", label: "TODO" },
-      { value: "TODO", label: "TODO" },
-      { value: "TODO", label: "TODO" },
+      { value: "16 000+", label: "подписчиков на канале" },
+      { value: "3–4 года", label: "зарабатывает на Telegram" },
     ],
     channelLabel: "TODO: ссылка на Telegram-канал автора",
     channelHref: "#",
@@ -180,18 +179,18 @@ window.TT_CONTENT = {
 
   learningFormat: [
     { label: "Длительность", value: "TODO" },
-    { label: "Доступ к урокам", value: "TODO" },
-    { label: "Формат занятий", value: "TODO" },
-    { label: "Практика", value: "TODO" },
-    { label: "Поддержка", value: "TODO" },
-    { label: "Чат участников", value: "TODO" },
+    { label: "Доступ к урокам", value: "Бессрочный" },
+    { label: "Формат занятий", value: "Видеоуроки и презентации в закрытом Telegram-канале" },
+    { label: "Практика", value: "Задания после каждого урока" },
+    { label: "Поддержка", value: "Обсуждение вопросов в закрытом канале" },
+    { label: "Чат участников", value: "Закрытый Telegram-канал курса" },
     { label: "Обратная связь", value: "TODO" },
-    { label: "Доступ после обучения", value: "TODO" },
+    { label: "Доступ после обучения", value: "Бессрочный" },
   ],
 
   pricing: [
-    { name: "Стандарт", price: "4 970 ₽", oldPrice: null, installment: null, features: ["Доступ ко всем материалам курса"], featured: false, cta: "Записаться" },
-    { name: "VIP", price: "29 700 ₽", oldPrice: null, installment: null, features: ["Доступ к курсу", "Личный разбор канала (после обучения)", "Консультация"], featured: false, cta: "Записаться" },
+    { name: "Стандарт", price: "4 970 ₽", oldPrice: null, installment: null, features: ["Доступ ко всем материалам курса"], featured: false, cta: "Занять место" },
+    { name: "VIP", price: "29 700 ₽", oldPrice: null, installment: null, features: ["Доступ к курсу", "Личный разбор канала (после обучения)", "Консультация"], featured: false, cta: "Занять место" },
   ],
   pricingNote: "",
 
