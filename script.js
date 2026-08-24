@@ -7,6 +7,10 @@
     arrowRight: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     arrowFlat: '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8H14M14 8L9.5 3.5M14 8L9.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     check: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.2 11.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    access: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 11V7.5C8 5 9.8 4 12 4C13.6 4 15 4.7 15.6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+    format: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 9L14.5 12L10.5 15V9Z" fill="currentColor"/></svg>',
+    practice: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.7"/></svg>',
+    support: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12C4 7.6 7.8 4.5 12 4.5C16.2 4.5 20 7.6 20 12C20 16 16.5 19 12.3 19C11.4 19 10.6 18.9 9.9 18.7L5.5 20L6.6 16.6C5 15.3 4 13.8 4 12Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
   };
 
   function el(html) {
@@ -194,7 +198,11 @@
     var wrap = document.getElementById("formatGrid");
     if (!wrap) return;
     wrap.innerHTML = DATA.learningFormat.map(function (f) {
-      return '<div class="format-item"><div class="format-label">' + esc(f.label) + '</div><div class="format-value">' + esc(f.value) + "</div></div>";
+      return (
+        '<div class="format-item">' +
+        '<div class="format-icon">' + (ICONS[f.icon] || "") + "</div>" +
+        '<div class="format-label">' + esc(f.label) + '</div><div class="format-value">' + esc(f.value) + "</div></div>"
+      );
     }).join("");
   }
 

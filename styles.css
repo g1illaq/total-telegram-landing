@@ -668,11 +668,27 @@ a { color: inherit; }
 .format-item {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 18px;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.format-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.format-value { font-size: 15px; color: var(--ink-soft); }
+.format-item:hover { border-color: var(--accent-border); transform: translateY(-2px); }
+
+.format-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.format-label { font-family: var(--font-display); font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); margin-bottom: 8px; }
+.format-value { font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
 
 /* =========================================================
    PRICING
