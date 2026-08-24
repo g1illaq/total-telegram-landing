@@ -167,8 +167,8 @@ window.TT_CONTENT = {
       { value: "16 000+", label: "подписчиков на канале" },
       { value: "3–4 года", label: "зарабатывает на Telegram" },
     ],
-    channelLabel: "TODO: ссылка на Telegram-канал автора",
-    channelHref: "#",
+    channelLabel: "Канал автора · @makeev_blog",
+    channelHref: "https://t.me/makeev_blog",
   },
 
   cases: [

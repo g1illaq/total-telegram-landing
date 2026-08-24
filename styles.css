@@ -613,24 +613,7 @@ a { color: inherit; }
 /* =========================================================
    AUTHOR
    ========================================================= */
-.author-grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start; }
-
-.author-photo {
-  aspect-ratio: 3/4;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-strong);
-  background: var(--surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
-}
-.author-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--radius) - 1px); }
+.author-grid { max-width: 640px; }
 
 .author-name { font-size: 26px; font-weight: 700; margin: 0 0 4px; }
 .author-role { font-size: 14.5px; color: var(--accent-2); font-family: var(--font-mono); margin: 0 0 20px; }
@@ -798,8 +781,6 @@ a { color: inherit; }
   .nav-toggle { display: flex; }
   .outcomes-grid { grid-template-columns: repeat(2, 1fr); }
   .audience-grid { grid-template-columns: 1fr; }
-  .author-grid { grid-template-columns: 1fr; }
-  .author-photo { max-width: 260px; }
   .cases-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
   .format-grid { grid-template-columns: repeat(2, 1fr); }
