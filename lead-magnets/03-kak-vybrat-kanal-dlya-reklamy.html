@@ -17,20 +17,22 @@
   --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
   --font-display: "Unbounded", "Arial Narrow", sans-serif;
   --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --container: 900px;
+  --container-wide: 1120px;
 }
 * { box-sizing: border-box; }
-html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var(--ink); -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.doc { max-width: 1080px; margin: 0 auto; }
-.sheet {
-  background: var(--bg);
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  margin: 0; overflow-x: hidden;
+  font-family: var(--font-sans); background: var(--bg); color: var(--ink);
+  -webkit-font-smoothing: antialiased;
   background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 72px 72px;
-  padding: 64px 72px; min-height: 100vh; position: relative;
-  page-break-after: always; break-after: page;
-  display: flex; flex-direction: column;
+  background-size: 96px 96px;
 }
-.sheet:last-child { page-break-after: auto; break-after: auto; }
+img { max-width: 100%; display: block; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.container-wide { max-width: var(--container-wide); margin: 0 auto; padding: 0 24px; }
+
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11.5px; font-weight: 400;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); background: var(--accent-soft);
@@ -40,22 +42,40 @@ body { margin: 0; font-family: var(--font-sans); background: #1a1a1a; color: var
 .brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
 .brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
 .brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
-.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; padding: 8px 12px; width: fit-content; }
+
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-decoration: none; color: var(--ink); padding: 9px 14px; }
 .logo span { color: var(--accent); }
-.cover { justify-content: center; align-items: center; text-align: center; }
-.cover .logo { margin: 0 auto 48px; } .cover .eyebrow { margin: 0 auto 28px; }
-.cover-frame { display: inline-block; padding: 32px clamp(20px,5vw,56px); margin-bottom: 32px; }
-.cover-title { font-family: var(--font-display); font-size: clamp(26px,3.8vw,40px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 0; max-width: 20ch; }
-.cover-title .accent { color: var(--accent); }
-.cover-subtitle { font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 50ch; margin: 0 auto 40px; }
-.cover-meta { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
-.cover-meta strong { color: var(--ink-soft); font-weight: 500; }
-.cover-author { margin-top: auto; padding-top: 40px; font-size: 13px; color: var(--muted); }
-.cover-author strong { color: var(--ink-soft); }
-.page-head { margin-bottom: 30px; }
-.page-title { font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
-.page-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 68ch; margin: 14px 0 0; }
-.page-num { position: absolute; bottom: 40px; right: 56px; font-family: var(--font-display); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 999px;
+  font-family: var(--font-display); font-weight: 500; font-size: 14.5px; cursor: pointer; text-decoration: none;
+  white-space: nowrap; padding: 14px 26px; transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.btn-primary { background: var(--accent); color: #0a0a0a; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
+.btn-primary:hover { background: var(--accent-2); transform: translateY(-1px); }
+.btn-ghost { background: transparent; border-color: var(--border-strong); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--accent-border); color: var(--accent-2); transform: translateY(-1px); }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(8,9,11,.72); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; max-width: var(--container-wide); margin: 0 auto; padding: 0 24px; }
+
+.hero { padding: 72px 0 56px; text-align: center; }
+.hero .logo { margin: 0 auto 32px; width: fit-content; }
+.hero .eyebrow { margin: 0 auto 24px; }
+.hero-frame { display: inline-block; padding: 28px clamp(18px,5vw,48px); margin-bottom: 28px; }
+.hero-title { font-family: var(--font-display); font-size: clamp(24px,4vw,40px); font-weight: 600; text-transform: uppercase; line-height: 1.25; margin: 0; max-width: 20ch; }
+.hero-title .accent { color: var(--accent); }
+.hero-subtitle { font-size: 16.5px; line-height: 1.6; color: var(--ink-soft); max-width: 50ch; margin: 0 auto 32px; }
+.hero-meta { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-family: var(--font-display); font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 36px; }
+.hero-meta strong { color: var(--ink-soft); font-weight: 500; }
+.hero-author { font-size: 13px; color: var(--muted); margin-top: 28px; }
+.hero-author strong { color: var(--ink-soft); }
+
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-head { margin-bottom: 32px; text-align: center; }
+.section-title { font-family: var(--font-display); font-size: clamp(22px,3vw,30px); font-weight: 600; text-transform: uppercase; line-height: 1.2; margin: 14px 0 0; }
+.section-lead { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 68ch; margin: 14px auto 0; }
 
 .check-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
 .check-num { font-family: var(--font-display); font-size: 12px; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; width: 26px; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
@@ -79,147 +99,159 @@ table.cmp td[contenteditable]:empty::before { content: attr(data-placeholder); c
 .mini-btn { font-family: var(--font-display); font-size: 12px; background: var(--surface); border: 1px solid var(--border-strong); color: var(--ink-soft); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
 .mini-btn:hover { border-color: var(--accent-border); color: var(--accent-2); }
 .table-note { font-size: 12.5px; color: var(--muted); margin-top: 12px; max-width: 68ch; line-height: 1.5; }
+.table-hint { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 
-.final { justify-content: center; text-align: center; align-items: center; }
-.final-title { font-family: var(--font-display); font-size: clamp(22px,3.2vw,32px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
-.final-lead { font-size: 15px; line-height: 1.65; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 32px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0a0a0a; font-family: var(--font-display); font-weight: 500; font-size: 14.5px; text-decoration: none; border-radius: 999px; padding: 14px 26px; box-shadow: 0 10px 24px -10px rgba(255,95,31,.55); }
-.final-note { margin-top: 28px; font-size: 12.5px; color: var(--muted); max-width: 48ch; }
+.final-cta { text-align: center; padding: 88px 0; background: radial-gradient(ellipse at center, var(--accent-soft), transparent 65%); border-top: 1px solid var(--border); }
+.final-cta .logo { margin: 0 auto 24px; width: fit-content; }
+.final-title { font-family: var(--font-display); font-size: clamp(24px,3.6vw,36px); font-weight: 600; text-transform: uppercase; max-width: 20ch; margin: 20px auto 16px; line-height: 1.2; }
+.final-lead { font-size: 15.5px; line-height: 1.65; color: var(--ink-soft); max-width: 54ch; margin: 0 auto 32px; }
 
-@media (max-width: 700px) { .sheet { padding: 40px 20px; } .page-num { display: none; } }
-@media print {
-  body { background: var(--bg); }
-  .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
-  .table-actions { display: none; }
-  .check-item, .guide-block { break-inside: avoid; }
-  table.cmp { min-width: 0; width: 100%; table-layout: fixed; font-size: 8.5px; }
-  table.cmp th, table.cmp td { padding: 6px 4px; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
-  @page { size: A4; margin: 0; }
-}
+.site-footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+.site-footer .logo { margin: 0 auto 10px; width: fit-content; }
+.site-footer p { font-size: 12.5px; color: var(--muted); margin: 0; }
+
+@media (max-width: 700px) { .header-inner { padding: 0 20px; } }
 </style>
 </head>
 <body>
-<div class="doc">
 
-  <!-- COVER -->
-  <section class="sheet cover">
-    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
-    <div class="eyebrow">Бесплатный материал</div>
-    <div class="cover-frame brand-frame"><i></i><i></i><i></i><i></i>
-      <h1 class="cover-title">Не покупай рекламу в Telegram, пока не проверишь <span class="accent">эти 12 пунктов</span></h1>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></a>
+    <a href="https://total-telegram-landing.vercel.app" class="btn btn-ghost" style="padding:9px 18px;font-size:13px;">На сайт курса</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Бесплатный материал</div>
+      <div class="hero-frame brand-frame"><i></i><i></i><i></i><i></i>
+        <h1 class="hero-title">Не покупай рекламу в Telegram, пока не проверишь <span class="accent">эти 12 пунктов</span></h1>
+      </div>
+      <p class="hero-subtitle">Инструкция и таблица сравнения — чтобы выбирать каналы для закупа по цифрам, а не на глаз.</p>
+      <div class="hero-meta">
+        <span><strong>12</strong> проверок</span>
+        <span><strong>5</strong> вопросов</span>
+        <span><strong>1</strong> таблица сравнения</span>
+      </div>
+      <a href="#checks" class="btn btn-primary">Смотреть чек-лист</a>
+      <div class="hero-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
     </div>
-    <p class="cover-subtitle">Инструкция и таблица сравнения — чтобы выбирать каналы для закупа по цифрам, а не на глаз.</p>
-    <div class="cover-meta">
-      <span><strong>12</strong> проверок</span>
-      <span><strong>5</strong> вопросов</span>
-      <span><strong>1</strong> таблица сравнения</span>
-    </div>
-    <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
   </section>
 
-  <!-- 12 CHECKS -->
-  <section class="sheet">
-    <div class="page-head">
-      <div class="eyebrow">12 пунктов</div>
-      <h2 class="page-title">Что проверять перед тем, как платить</h2>
-      <p class="page-lead">Большинство сливов бюджета случаются не из-за плохого объявления, а из-за того, что канал не проверили заранее. Пройдите эти 12 пунктов по каждому каналу-кандидату.</p>
+  <section class="section section-alt" id="checks">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin:0 auto 16px;">12 пунктов</div>
+        <h2 class="section-title">Что проверять перед тем, как платить</h2>
+        <p class="section-lead">Большинство сливов бюджета случаются не из-за плохого объявления, а из-за того, что канал не проверили заранее. Пройдите эти 12 пунктов по каждому каналу-кандидату.</p>
+      </div>
+      <div id="checksWrap"></div>
     </div>
-    <div id="checksWrap"></div>
-    <div class="page-num">02 / 06</div>
   </section>
 
-  <!-- GUIDE -->
-  <section class="sheet">
-    <div class="page-head">
-      <div class="eyebrow">Инструкция</div>
-      <h2 class="page-title">Как этим пользоваться на практике</h2>
+  <section class="section" id="guide">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin:0 auto 16px;">Инструкция</div>
+        <h2 class="section-title">Как этим пользоваться на практике</h2>
+      </div>
+      <div class="guide-block">
+        <h3>Какие каналы отбрасывать сразу</h3>
+        <ul>
+          <li>Нет открытой статистики или админ уклоняется от вопросов про охваты</li>
+          <li>Подписчики растут резкими скачками без видимого повода — похоже на накрутку</li>
+          <li>Реклама выходит почти в каждом посте — аудитория выгорела от рекламы</li>
+          <li>Средний охват поста заметно ниже 10–15% от числа подписчиков без внятной причины</li>
+        </ul>
+      </div>
+      <div class="guide-block">
+        <h3>На какие показатели смотреть в первую очередь</h3>
+        <p>Не на число подписчиков, а на охват поста относительно подписчиков, ER (вовлечённость), динамику подписчиков за 2–3 месяца и то, сколько уже стоит реклама в канале за последний месяц.</p>
+      </div>
+      <div class="guide-block">
+        <h3>Почему большое число подписчиков ничего не гарантирует</h3>
+        <p>Часть аудитории может быть неактивной, накрученной или набранной под другую тематику. Канал на 5 000 живых и вовлечённых подписчиков часто продаёт лучше, чем канал на 50 000 мёртвых.</p>
+      </div>
+      <div class="guide-block">
+        <h3>Как сравнить несколько размещений между собой</h3>
+        <p>Сведите все каналы в одну таблицу и считайте не абсолютную цену размещения, а CPM (цену за 1000 охвата) и ER. Сравнивайте именно эти два числа между каналами — цена размещения сама по себе ни о чём не говорит.</p>
+      </div>
+      <div class="guide-block" style="margin-bottom:0;">
+        <h3>Сколько можно заплатить за рекламу</h3>
+        <p>Отталкивайтесь от своей экономики, а не от прайса канала: посчитайте, сколько вам может стоить один подписчик, чтобы реклама окупилась — и сравнивайте прогнозную стоимость подписчика в канале с этой цифрой, а не наоборот.</p>
+      </div>
     </div>
-    <div class="guide-block">
-      <h3>Какие каналы отбрасывать сразу</h3>
-      <ul>
-        <li>Нет открытой статистики или админ уклоняется от вопросов про охваты</li>
-        <li>Подписчики растут резкими скачками без видимого повода — похоже на накрутку</li>
-        <li>Реклама выходит почти в каждом посте — аудитория выгорела от рекламы</li>
-        <li>Средний охват поста заметно ниже 10–15% от числа подписчиков без внятной причины</li>
-      </ul>
-    </div>
-    <div class="guide-block">
-      <h3>На какие показатели смотреть в первую очередь</h3>
-      <p>Не на число подписчиков, а на охват поста относительно подписчиков, ER (вовлеченность), динамику подписчиков за 2–3 месяца и то, сколько уже стоит реклама в канале за последний месяц.</p>
-    </div>
-    <div class="guide-block">
-      <h3>Почему большое число подписчиков ничего не гарантирует</h3>
-      <p>Часть аудитории может быть неактивной, накрученной или набранной под другую тематику. Канал на 5 000 живых и вовлеченных подписчиков часто продает лучше, чем канал на 50 000 мертвых.</p>
-    </div>
-    <div class="guide-block">
-      <h3>Как сравнить несколько размещений между собой</h3>
-      <p>Сведите все каналы в одну таблицу и считайте не абсолютную цену размещения, а CPM (цену за 1000 охвата) и ER. Сравнивайте именно эти два числа между каналами — цена размещения сама по себе ни о чем не говорит.</p>
-    </div>
-    <div class="guide-block">
-      <h3>Сколько можно заплатить за рекламу</h3>
-      <p>Отталкивайтесь от своей экономики, а не от прайса канала: посчитайте, сколько вам может стоить один подписчик, чтобы реклама окупилась — и сравнивайте прогнозную стоимость подписчика в канале с этой цифрой, а не наоборот.</p>
-    </div>
-    <div class="page-num">03 / 06</div>
   </section>
 
-  <!-- TABLE -->
-  <section class="sheet">
-    <div class="page-head">
-      <div class="eyebrow">Инструмент</div>
-      <h2 class="page-title">Таблица сравнения каналов</h2>
-      <p class="page-lead">Заполняйте прямо здесь — ячейки редактируются. Данные сохраняются в этом браузере. Также можно скопировать строки в Google Таблицы.</p>
+  <section class="section section-alt" id="table">
+    <div class="container-wide">
+      <div class="section-head">
+        <div class="eyebrow" style="margin:0 auto 16px;">Инструмент</div>
+        <h2 class="section-title">Таблица сравнения каналов</h2>
+        <p class="section-lead">Заполняйте прямо здесь — ячейки редактируются. Данные сохраняются в этом браузере. Также можно скопировать строки в Google Таблицы.</p>
+      </div>
+      <p class="table-hint">← Таблица широкая, на телефоне листайте вбок →</p>
+      <div class="table-wrap">
+        <table class="cmp" id="cmpTable">
+          <thead>
+            <tr>
+              <th>Канал</th><th>Тематика</th><th>Подписчики</th><th>Средний охват</th><th>Стоимость</th>
+              <th>CPM</th><th>ER</th><th>Динамика подписчиков</th><th>Совпадение ЦА</th><th>Рекл. нагрузка</th><th>Оценка</th><th>Решение</th>
+            </tr>
+          </thead>
+          <tbody id="cmpBody"></tbody>
+        </table>
+      </div>
+      <div class="table-actions">
+        <button class="mini-btn" id="addRow">+ добавить канал</button>
+        <button class="mini-btn" id="clearTable">Очистить таблицу</button>
+      </div>
+      <p class="table-note">CPM = стоимость размещения / средний охват × 1000. ER = (реакции + комментарии) / охват × 100%. «Решение» — берём / думаем / отказ.</p>
     </div>
-    <div class="table-wrap">
-      <table class="cmp" id="cmpTable">
-        <thead>
-          <tr>
-            <th>Канал</th><th>Тематика</th><th>Подписчики</th><th>Средний охват</th><th>Стоимость</th>
-            <th>CPM</th><th>ER</th><th>Динамика подписчиков</th><th>Совпадение ЦА</th><th>Рекл. нагрузка</th><th>Оценка</th><th>Решение</th>
-          </tr>
-        </thead>
-        <tbody id="cmpBody"></tbody>
-      </table>
-    </div>
-    <div class="table-actions">
-      <button class="mini-btn" id="addRow">+ добавить канал</button>
-      <button class="mini-btn" id="clearTable">Очистить таблицу</button>
-    </div>
-    <p class="table-note">CPM = стоимость размещения / средний охват × 1000. ER = (реакции + комментарии) / охват × 100%. «Решение» — берем / думаем / отказ.</p>
-    <div class="page-num">04 / 06</div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="sheet final">
-    <div class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></div>
-    <div class="eyebrow" style="margin-top:32px;">Что дальше</div>
-    <h2 class="final-title">Выбор канала — только часть закупа</h2>
-    <p class="final-lead">Дальше — как договариваться о размещении, готовить рекламную подачу и не сливать бюджет на плохом креативе. Это разбирается в модуле «Продвижение Telegram-канала» курса Total Telegram.</p>
-    <a href="https://claude.ai/code/artifact/f3ff0d8c-4a3f-4796-ac04-4c584c9cbffb" class="btn" target="_blank" rel="noopener">
-      Посмотреть курс Total Telegram
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <p class="final-note">TODO: заменить ссылку на публичный лендинг Total Telegram, когда сайт будет опубликован по постоянному адресу.</p>
+  <section class="final-cta">
+    <div class="container">
+      <a href="#top" class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></a>
+      <div class="eyebrow" style="margin:16px auto 0;">Что дальше</div>
+      <h2 class="final-title">Выбор канала — только часть закупа</h2>
+      <p class="final-lead">Дальше — как договариваться о размещении, готовить рекламную подачу и не сливать бюджет на плохом креативе. Это разбирается в модуле «Продвижение Telegram-канала» курса Total Telegram.</p>
+      <a href="https://total-telegram-landing.vercel.app" class="btn btn-primary">
+        Посмотреть курс Total Telegram
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </section>
 
-</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="#top" class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></a>
+    <p>© <span id="footerYear"></span> Total Telegram</p>
+  </div>
+</footer>
 
 <script>
 (function () {
   "use strict";
 
   var CHECKS = [
-    { h: "Тематика совпадает с вашей аудиторией", p: "Не «примерно похожая», а буквально та аудитория, которой вы продаете." },
+    { h: "Тематика совпадает с вашей аудиторией", p: "Не «примерно похожая», а буквально та аудитория, которой вы продаёте." },
     { h: "Подписчики живые, а не накрученные", p: "Посмотрите график роста в статистике канала — резкие скачки без повода — плохой знак." },
     { h: "Средний охват поста относительно подписчиков", p: "Здоровый ориентир — от 10–15% подписчиков видят обычный пост." },
-    { h: "ER — вовлеченность", p: "Реакции и комментарии относительно охвата. Низкий ER — аудитория присутствует, но не читает." },
-    { h: "Динамика подписчиков", p: "Растет, стоит на месте или падает за последние 2–3 месяца." },
+    { h: "ER — вовлечённость", p: "Реакции и комментарии относительно охвата. Низкий ER — аудитория присутствует, но не читает." },
+    { h: "Динамика подписчиков", p: "Растёт, стоит на месте или падает за последние 2–3 месяца." },
     { h: "Рекламная нагрузка канала", p: "Сколько рекламы уже выходит. Реклама в каждом посте — аудитория выгорела." },
     { h: "CPM размещения", p: "Стоимость за 1000 охвата — а не абсолютная цена поста." },
     { h: "Формат размещения", p: "Нативная интеграция обычно работает лучше прямой рекламной вставки." },
     { h: "Тон канала не противоречит продукту", p: "Резкий несовпадающий тон снижает доверие к рекламе, даже если аудитория подходит." },
     { h: "История похожих размещений", p: "Спросите админа, кто уже размещался с похожим продуктом и как это сработало." },
     { h: "Отзывы других рекламодателей", p: "Отзывы о канале как площадке — не о продукте, который там рекламировали." },
-    { h: "Что происходит с постом после публикации", p: "Держится ли реклама в канале заявленное время или админ ее тихо удаляет раньше." },
+    { h: "Что происходит с постом после публикации", p: "Держится ли реклама в канале заявленное время или админ её тихо удаляет раньше." },
   ];
 
   function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
@@ -281,6 +313,9 @@ table.cmp td[contenteditable]:empty::before { content: attr(data-placeholder); c
 
   renderChecks();
   loadTable();
+
+  var yearEl = document.getElementById("footerYear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 </script>
 </body>
