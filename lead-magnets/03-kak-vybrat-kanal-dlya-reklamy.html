@@ -92,6 +92,8 @@ table.cmp td[contenteditable]:empty::before { content: attr(data-placeholder); c
   .sheet { min-height: 0; height: auto; padding: 20mm 16mm; margin-top: 0; }
   .table-actions { display: none; }
   .check-item, .guide-block { break-inside: avoid; }
+  table.cmp { min-width: 0; width: 100%; table-layout: fixed; font-size: 8.5px; }
+  table.cmp th, table.cmp td { padding: 6px 4px; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
   @page { size: A4; margin: 0; }
 }
 </style>
@@ -112,6 +114,7 @@ table.cmp td[contenteditable]:empty::before { content: attr(data-placeholder); c
       <span><strong>5</strong> вопросов</span>
       <span><strong>1</strong> таблица сравнения</span>
     </div>
+    <a href="pdf/03-kak-vybrat-kanal-dlya-reklamy.pdf" download class="btn" style="background:transparent;color:var(--ink-soft);border:1px solid var(--border-strong);box-shadow:none;margin-top:8px;">Скачать заполняемый PDF</a>
     <div class="cover-author">Материал подготовлен для канала «Секреты продвижения в TG» · <strong>Ахмад Макеев</strong></div>
   </section>
 
