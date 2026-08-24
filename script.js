@@ -228,7 +228,7 @@
         '<div class="price-value">' + priceLine + "</div>" +
         (p.installment ? '<p class="price-installment">' + esc(p.installment) + "</p>" : "") +
         '<ul class="price-features">' + features + "</ul>" +
-        '<a href="#faq" class="btn ' + (p.featured ? "btn-primary" : "btn-ghost") + '">' + esc(p.cta) + "</a>" +
+        '<a href="https://t.me/totaltg_bot" target="_blank" rel="noopener" class="btn ' + (p.featured ? "btn-primary" : "btn-ghost") + '">' + esc(p.cta) + "</a>" +
         "</div>"
       );
     }).join("");
