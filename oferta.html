@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Публичная оферта</title>
+<meta name="description" content="Договор публичной оферты на оказание образовательных услуг Total Telegram." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #060607; --bg-alt: #0b0c0f; --surface: #101114;
+  --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+  --ink: #f5f5f7; --ink-soft: rgba(245,245,247,0.72); --muted: rgba(245,245,247,0.48);
+  --accent: #ff4d1f; --accent-2: #ff7a45; --accent-soft: rgba(255,77,31,0.12); --accent-border: rgba(255,77,31,0.4);
+  --font-display: "Unbounded", "Arial Narrow", sans-serif;
+  --font-sans: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  margin: 0; overflow-x: hidden;
+  font-family: var(--font-sans); background: var(--bg); color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+.logo { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-display); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-decoration: none; color: var(--ink); }
+.logo span { color: var(--accent); }
+.brand-frame { position: relative; border: 1px solid var(--accent-border); background: var(--accent-soft); padding: 9px 14px; width: fit-content; }
+.brand-frame i { position: absolute; width: 6px; height: 6px; background: var(--accent); pointer-events: none; }
+.brand-frame i:nth-child(1) { top: -3.5px; left: -3.5px; } .brand-frame i:nth-child(2) { top: -3.5px; right: -3.5px; }
+.brand-frame i:nth-child(3) { bottom: -3.5px; left: -3.5px; } .brand-frame i:nth-child(4) { bottom: -3.5px; right: -3.5px; }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(8,9,11,.8); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.header-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.btn-ghost { display: inline-flex; align-items: center; border: 1px solid var(--border-strong); border-radius: 999px; padding: 9px 18px; font-family: var(--font-display); font-size: 13px; color: var(--ink); text-decoration: none; }
+.btn-ghost:hover { border-color: var(--accent-border); color: var(--accent-2); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 100px; }
+
+.doc-eyebrow { display: inline-flex; font-family: var(--font-display); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 4px; padding: 7px 13px; margin-bottom: 20px; }
+h1 { font-family: var(--font-display); font-size: clamp(24px,4vw,32px); font-weight: 600; line-height: 1.25; margin: 0 0 12px; }
+.doc-meta { font-size: 13.5px; color: var(--muted); margin: 0 0 40px; }
+.doc-meta b { color: var(--ink-soft); font-weight: 500; }
+
+.todo-banner {
+  background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 12px;
+  padding: 16px 18px; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 44px;
+}
+.todo-banner b { color: var(--ink); }
+
+h2 { font-family: var(--font-display); font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: .01em; color: var(--ink); margin: 44px 0 16px; padding-top: 4px; border-top: 1px solid var(--border); padding-top: 24px; }
+h2 .num { color: var(--accent-2); margin-right: 10px; }
+p { font-size: 15px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 14px; }
+ol.clauses { margin: 0 0 14px; padding-left: 22px; }
+ol.clauses li { font-size: 15px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 10px; }
+strong { color: var(--ink); font-weight: 600; }
+.todo { color: var(--accent-2); }
+
+.req-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; margin-top: 12px; }
+.req-box p { margin: 0 0 6px; font-size: 14.5px; }
+.req-box p:last-child { margin-bottom: 0; }
+
+.site-footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+.site-footer p { font-size: 12.5px; color: var(--muted); margin: 10px 0 0; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo brand-frame"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></a>
+    <a href="/" class="btn-ghost">На сайт курса</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="doc-eyebrow">Юридический документ</div>
+  <h1>Публичная оферта на оказание образовательных услуг</h1>
+  <p class="doc-meta">Курс <b>Total Telegram</b> · редакция от <span class="todo">TODO: дата публикации</span></p>
+
+  <div class="todo-banner">
+    <b>Это структура документа, а не готовая юридическая редакция.</b> Все пункты, отмеченные как <span class="todo">TODO</span>, содержат реальные условия курса (тарифы, формат доступа) — они уже заполнены. Реквизиты исполнителя (ИП/ООО, ИНН, ОГРН, юридический адрес, банковские данные) и ряд юридических параметров (срок возврата, применимая юрисдикция, дата вступления в силу) не указывались нигде в материалах — их нельзя было выдумывать, поэтому они оставлены как TODO. Перед публикацией документ должен проверить юрист.
+  </div>
+
+  <h2><span class="num">1.</span>Термины и определения</h2>
+  <p><strong>Исполнитель</strong> — <span class="todo">TODO: наименование ИП/ООО, оказывающее услуги под брендом Total Telegram</span>.</p>
+  <p><strong>Заказчик (Пользователь)</strong> — физическое лицо, совершившее акцепт настоящей оферты путём оплаты услуг.</p>
+  <p><strong>Курс</strong> — образовательный продукт «Total Telegram», включающий видеоуроки, практические задания и материалы, доступ к которым предоставляется через закрытый Telegram-канал.</p>
+  <p><strong>Сайт</strong> — интернет-ресурс Total Telegram, на котором размещена информация о курсе и настоящая оферта.</p>
+
+  <h2><span class="num">2.</span>Общие положения</h2>
+  <ol class="clauses">
+    <li>Настоящий документ является публичной офертой Исполнителя в адрес любого дееспособного физического лица заключить договор оказания образовательных услуг на изложенных ниже условиях.</li>
+    <li>Оферта регулируется положениями ст. 437 Гражданского кодекса РФ о публичной оферте.</li>
+    <li>Акцепт оферты означает полное и безоговорочное согласие Заказчика со всеми её условиями.</li>
+  </ol>
+
+  <h2><span class="num">3.</span>Предмет договора</h2>
+  <p>Исполнитель обязуется предоставить Заказчику доступ к материалам курса Total Telegram в объёме выбранного тарифа, а Заказчик обязуется оплатить услуги в порядке, предусмотренном настоящей офертой.</p>
+
+  <h2><span class="num">4.</span>Порядок акцепта оферты</h2>
+  <ol class="clauses">
+    <li>Акцептом оферты является совершение Заказчиком оплаты выбранного тарифа курса.</li>
+    <li>С момента оплаты договор считается заключённым в письменной форме в соответствии с п. 3 ст. 434 ГК РФ.</li>
+  </ol>
+
+  <h2><span class="num">5.</span>Стоимость услуг и тарифы</h2>
+  <p>Стоимость определяется выбранным тарифом на момент оплаты:</p>
+  <div class="req-box">
+    <p><strong>Тариф «Стандарт»</strong> — 4 970 ₽. Доступ ко всем материалам курса.</p>
+    <p><strong>Тариф «VIP»</strong> — 29 700 ₽. Доступ к курсу, личный разбор канала после обучения, консультация.</p>
+  </div>
+  <p style="margin-top:14px;">Способы оплаты: <span class="todo">TODO: перечислить доступные способы оплаты (эквайринг/платёжная система)</span>. Рассрочка: <span class="todo">TODO: указать, доступна ли рассрочка и на каких условиях</span>.</p>
+
+  <h2><span class="num">6.</span>Порядок оказания услуг</h2>
+  <ol class="clauses">
+    <li>После оплаты Заказчик получает доступ к закрытому Telegram-каналу курса, где размещены видеоуроки, презентации и практические задания.</li>
+    <li>Доступ к материалам курса предоставляется на бессрочной основе.</li>
+    <li>Обратная связь и обсуждение вопросов по курсу происходит в закрытом канале.</li>
+    <li>Срок предоставления доступа с момента оплаты: <span class="todo">TODO: указать срок (например, «в течение 24 часов»)</span>.</li>
+  </ol>
+
+  <h2><span class="num">7.</span>Права и обязанности сторон</h2>
+  <p><strong>Исполнитель вправе:</strong> самостоятельно определять формы и методы оказания услуг; привлекать третьих лиц для оказания услуг; вносить изменения в программу курса, если это не снижает его качества.</p>
+  <p><strong>Исполнитель обязан:</strong> предоставить доступ к материалам курса в соответствии с условиями оферты; обеспечить конфиденциальность персональных данных Заказчика.</p>
+  <p><strong>Заказчик вправе:</strong> получать доступ к материалам курса в объёме оплаченного тарифа; обращаться за консультацией в рамках выбранного тарифа.</p>
+  <p><strong>Заказчик обязан:</strong> своевременно произвести оплату; не передавать доступ к материалам курса третьим лицам.</p>
+
+  <h2><span class="num">8.</span>Интеллектуальная собственность</h2>
+  <p>Все материалы курса (видеоуроки, тексты, презентации, задания) являются объектами авторского права Исполнителя. Заказчик не вправе копировать, распространять, публиковать или иным образом использовать материалы курса в коммерческих целях без письменного согласия Исполнителя.</p>
+
+  <h2><span class="num">9.</span>Возврат денежных средств</h2>
+  <p>Заказчик вправе отказаться от исполнения договора и потребовать возврата уплаченных денежных средств в течение <span class="todo">TODO: указать срок в днях</span> с момента оплаты при условии <span class="todo">TODO: указать условие — например, «если пройдено не более N уроков»</span>. Возврат производится за вычетом фактически понесённых Исполнителем расходов, если применимо.</p>
+
+  <h2><span class="num">10.</span>Ответственность сторон</h2>
+  <ol class="clauses">
+    <li>Стороны несут ответственность за неисполнение или ненадлежащее исполнение обязательств по договору в соответствии с действующим законодательством РФ.</li>
+    <li>Исполнитель не несёт ответственности за результаты, не достигнутые Заказчиком по причине несоблюдения рекомендаций курса, а также за любые финансовые результаты применения полученных знаний.</li>
+    <li>Исполнитель не гарантирует конкретных доходов, количества подписчиков или иных измеримых результатов — курс предоставляет знания и систему, применение которых зависит от Заказчика.</li>
+  </ol>
+
+  <h2><span class="num">11.</span>Форс-мажор</h2>
+  <p>Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств по договору, если оно явилось следствием обстоятельств непреодолимой силы, возникших после заключения договора.</p>
+
+  <h2><span class="num">12.</span>Конфиденциальность и персональные данные</h2>
+  <p>Обработка персональных данных Заказчика осуществляется в соответствии с политикой конфиденциальности: <span class="todo">TODO: ссылка на политику конфиденциальности (пока не подготовлена отдельным документом)</span>.</p>
+
+  <h2><span class="num">13.</span>Срок действия и изменение оферты</h2>
+  <p>Оферта вступает в силу с момента размещения на сайте и действует до момента отзыва Исполнителем. Исполнитель вправе в любой момент внести изменения в условия оферты; актуальная редакция всегда доступна на этой странице.</p>
+
+  <h2><span class="num">14.</span>Порядок разрешения споров</h2>
+  <p>Все споры и разногласия решаются путём переговоров. При недостижении согласия — в судебном порядке по месту нахождения Исполнителя: <span class="todo">TODO: указать применимую юрисдикцию</span>.</p>
+
+  <h2><span class="num">15.</span>Реквизиты исполнителя</h2>
+  <div class="req-box">
+    <p><span class="todo">TODO: полное наименование ИП/ООО</span></p>
+    <p><span class="todo">TODO: ИНН</span></p>
+    <p><span class="todo">TODO: ОГРН / ОГРНИП</span></p>
+    <p><span class="todo">TODO: юридический адрес</span></p>
+    <p><span class="todo">TODO: банковские реквизиты (р/с, банк, БИК, к/с)</span></p>
+    <p><span class="todo">TODO: контактный email</span></p>
+    <p><span class="todo">TODO: контактный телефон</span></p>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <a href="/" class="logo brand-frame" style="margin:0 auto;"><i></i><i></i><i></i><i></i>TOTAL<span>TELEGRAM</span></a>
+  <p>© <span id="footerYear"></span> Total Telegram</p>
+</footer>
+
+<script>
+  var yearEl = document.getElementById("footerYear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
