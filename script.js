@@ -11,6 +11,12 @@
     format: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 9L14.5 12L10.5 15V9Z" fill="currentColor"/></svg>',
     practice: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.7"/></svg>',
     support: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12C4 7.6 7.8 4.5 12 4.5C16.2 4.5 20 7.6 20 12C20 16 16.5 19 12.3 19C11.4 19 10.6 18.9 9.9 18.7L5.5 20L6.6 16.6C5 15.3 4 13.8 4 12Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+    ecoChannel: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M7 9H17M7 12.5H14M7 16H11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+    ecoBot: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="8" width="15" height="11" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M12 8V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="3.6" r="1.3" fill="currentColor"/><circle cx="9" cy="13.2" r="1.3" fill="currentColor"/><circle cx="15" cy="13.2" r="1.3" fill="currentColor"/><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+    ecoMiniApp: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6.5" y="3" width="11" height="18" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10 17.5H14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="9" y="6.5" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>',
+    ecoAds: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10V14C3.5 14.8 4.1 15.5 5 15.5H6.5L8 20H10L8.7 15.5H10L17 19V5L10 9H5C4.1 9 3.5 9.7 3.5 10.5V10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M19.5 9.5C20.3 10.3 20.3 13.7 19.5 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+    ecoAi: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4L13.6 9.4L19 11L13.6 12.6L12 18L10.4 12.6L5 11L10.4 9.4L12 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18.5 15.5L19.2 17.7L21 18.5L19.2 19.3L18.5 21.5L17.8 19.3L16 18.5L17.8 17.7L18.5 15.5Z" fill="currentColor"/></svg>',
+    ecoTribute: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V16.5M14.5 9.5C14.5 8.4 13.4 7.5 12 7.5C10.6 7.5 9.5 8.4 9.5 9.5C9.5 10.6 10.6 11.2 12 11.5C13.4 11.8 14.5 12.4 14.5 13.5C14.5 14.6 13.4 15.5 12 15.5C10.6 15.5 9.5 14.6 9.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
   };
 
   function el(html) {
@@ -145,7 +151,7 @@
     var wrap = document.getElementById("ecoGrid");
     if (!wrap) return;
     wrap.innerHTML = DATA.ecosystem.map(function (e) {
-      return '<div class="eco-card reveal"><h3>' + esc(e.title) + "</h3><p>" + esc(e.text) + "</p></div>";
+      return '<div class="eco-card reveal"><div class="eco-icon">' + (ICONS[e.icon] || "") + '</div><h3>' + esc(e.title) + "</h3><p>" + esc(e.text) + "</p></div>";
     }).join("");
   }
 
